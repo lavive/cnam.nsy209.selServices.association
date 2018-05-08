@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+  <!-- Servlets -->  
+  <servlet>
+    <servlet-name>AuthenticationServlet</servlet-name>
+    <servlet-class>cnam.nsy209.selServices.association.server.servicesImpl.AuthenticationServiceImpl</servlet-class>
+  </servlet>      
+  
+  <servlet>
+    <servlet-name>AssociationServlet</servlet-name>
+    <servlet-class>cnam.nsy209.selServices.association.server.servicesImpl.AssociationServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>CategoriesServlet</servlet-name>
+    <servlet-class>cnam.nsy209.selServices.association.server.servicesImpl.CategoriesServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>MembersServlet</servlet-name>
+    <servlet-class>cnam.nsy209.selServices.association.server.servicesImpl.MembersServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>MessagesServlet</servlet-name>
+    <servlet-class>cnam.nsy209.selServices.association.server.servicesImpl.MessagesServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>SuppliesDemandsServlet</servlet-name>
+    <servlet-class>cnam.nsy209.selServices.association.server.servicesImpl.SuppliesDemandsServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>TransactionsServlet</servlet-name>
+    <servlet-class>cnam.nsy209.selServices.association.server.servicesImpl.TransactionsServiceImpl</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+    <servlet-name>AuthenticationServlet</servlet-name>
+    <url-pattern>/Association/AuthenticationService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AssociationServlet</servlet-name>
+    <url-pattern>/Association/AssociationService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>CategoriesServlet</servlet-name>
+    <url-pattern>/Association/CategoriesService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>MembersServlet</servlet-name>
+    <url-pattern>/Association/MembersService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>MessagesServlet</servlet-name>
+    <url-pattern>/Association/MessagesService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>SuppliesDemandsServlet</servlet-name>
+    <url-pattern>/Association/SuppliesDemandsService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>TransactionsServlet</servlet-name>
+    <url-pattern>/Association/TransactionsService</url-pattern>
+  </servlet-mapping>
+
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Association.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

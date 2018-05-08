@@ -1,0 +1,144 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+
+/** Personal CSS styles */
+
+/************************** AUTHENTICATION PAGE **********************************/
+
+.comicFont {
+	font-family:"Comic Sans MS";
+	font-size:3em;	
+}
+
+.comicSmallFont {
+	font-family:"Comic Sans MS";
+	font-size:1em;	
+}
+
+.calibriFont {
+	font-family:"Calibri";
+	font-size:2em;	
+}
+
+.calibriSmallFont {
+	font-family:"Calibri";
+}
+
+.titleFont {
+	font-family:"Calibri";
+	font-size:3em;
+	text-align:center;
+}
+
+.errorFont {
+	font-family:"Calibri";
+	font-style:italic;
+	color:red;
+	text-align:center;
+}
+
+.errorLabel {
+	font-family:"Calibri";
+	font-size:2em;
+	font-style:italic;
+	color:red;
+	text-align:center;
+	background-color:lightgray;
+}
+
+
+/************************** MENU PAGE **********************************/
+
+.buttonMenu {
+	font-family:"Calibri";
+	font-size:2em;	
+	margin: 0.25em ;	
+}
+
+.buttonMenuCliked {
+	font-family:"Calibri";
+	font-size:2em;	
+	margin: 0.25em ;
+	background-color: yellow;	
+}
+
+/************************** FAST MESSAGE PAGE **************************/
+
+.singleButton {
+	font-family:"Calibri";
+	font-size:1.5em;	
+	margin: 0.25em ;	
+}
+
+/************************** DIALOG BOX *********************************/
+
+.buttonDialog {
+	font-family:"Calibri";
+	font-size:2em;	
+	margin: 0.25em ;	
+}
+
+/************************** BOTTOM BAND *********************************/
+
+.BottomBand {
+	font-family:"Calibri";
+	font-style:italic;
+	font-size:1.5em;			
+}
+
+/************************** HORIZONTAL MENU PAGE ************************/
+
+.buttonHorizontalMenu {
+	font-family:"Calibri";
+	font-size:2em;	
+	margin: 1em ;	
+}
+
+/************************** FLEXTABLE FONT ******************************/
+.calibriFontFlexTable {
+	font-family:"Calibri";
+	font-size:1.5em;	
+}
+
+.calibriSmallFontFlexTable {
+	font-family:"Calibri";
+}
+
+.titleFontFlexTable {
+	font-family:"Calibri";
+	font-size:3em;
+	text-align:center;
+}
