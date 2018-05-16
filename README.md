@@ -3,6 +3,7 @@ CNAM NSY209 project 2018 - frontend side for SEL associations
 
 ## Installation
 ### Pre-requisites
+* Before install [cnam.nsy209.selServices.restService](https://github.com/lavive/cnam.nsy209.selServices.restService)
 * Web Server installed like [Tomcat](http://tomcat.apache.org/)
 * [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) installed
 * [Eclipse Oxygen](http://www.eclipse.org/downloads/eclipse-packages/) for JavaEE developper or more installed
