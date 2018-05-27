@@ -53,10 +53,6 @@ public class SuppliesDisplayControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		List<SupplyDemandDto> supplies = model.getSupplies();
-//		supplies.remove(supplyDemand);
-//		model.onSet(supplies);
 	}
 	private IActionToTransmit<SupplyDemandLocalDto> clickHandlerToTransmit() {
 		return new IActionToTransmit<SupplyDemandLocalDto>() {

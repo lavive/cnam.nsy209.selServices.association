@@ -38,9 +38,6 @@ public class MenuDemandsControler {
 					}
 				};
 				t.schedule(0);
-//				RootPanel.get().clear();
-//				RootPanel.get().add(new SuppliesDisplayPage(MenuDemandsControler.this.width,
-//															MenuDemandsControler.this.height));
 			}
 		};
 		
@@ -51,19 +48,5 @@ public class MenuDemandsControler {
 	public MenuDemandsModel getModel() {
 		return model;
 	}
-	
-	/* get the handler for back button */
-//	public ClickHandler getBackClickHandler() {
-//		ClickHandler clickHandler = new ClickHandler() {
-//			
-//			@Override
-//			public void onClick(ClickEvent event) {	
-//				RootPanel.get().clear();
-//				RootPanel.get().add(null);
-//			}
-//		};
-//		
-//		return clickHandler;
-//	}
 	
 }

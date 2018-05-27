@@ -23,12 +23,10 @@ public class TransactionEditControler {
 	private ListBox debtor;
 	private ListBox supplyDemandBox;
 	private TextBox amount;
-	//private TransactionAsyncCallback transactionCallback;
 	
 	/* Constructors */
 	public TransactionEditControler() {
 		this.model = TransactionEditModel.get();
-//		this.transactionCallback = new TransactionAsyncCallback();
 	}
 	
 	/* get the handler for validate button */
@@ -79,7 +77,7 @@ public class TransactionEditControler {
 	}
 
 	public void setCreditor(ListBox creditor) {
-		this.creditor = creditor;//transactionCallback = new TransactionAsyncCallback();
+		this.creditor = creditor;
 	}
 
 	public ListBox getDebtor() {
@@ -108,29 +106,12 @@ public class TransactionEditControler {
 
 	/* helper method */
 	private TransactionLocalDto buildTransaction() {
-		//TransactionLocalDto transaction = new TransactionLocalDto();
-		
-		
-//		List<MemberDto> members = model.getMembersForList();
-//		List<SupplyDemandDto> suppliesDemands = model.getSuppliesDemandsForList();
-		
-//		MemberDto debtorMember = MemberDto.getByFullName(this.debtor.getSelectedIndex(), members);
-//		MemberDto creditorMember = MemberDto.getByFullName(this.creditor.getSelectedIndex(), members);
-//		SupplyDemandDto supplyDemand = 
-//				SupplyDemandDto.getByIdentifiers(this.supplyDemandBox.getSelectedIndex(), suppliesDemands);
 		
 		TransactionLocalDto temporaryTransaction = new TransactionLocalDto();
 		temporaryTransaction.setCreditorMemberId(MemberLocalDto.getIdByFullName(this.creditor.getSelectedItemText()));
 		temporaryTransaction.setDebtorMemberId(MemberLocalDto.getIdByFullName(this.debtor.getSelectedItemText()));
 		temporaryTransaction.setSupplyDemandId(SupplyDemandLocalDto.getIdByFullName(this.supplyDemandBox.getSelectedItemText()));
 		temporaryTransaction.setAmount(this.amount.getText());
-		//transactionCallback.buildTransaction(temporaryTransaction,transaction);
-		
-		
-//		transaction.setDebtorMember(debtorMember);
-//		transaction.setCreditorMember(creditorMember);
-//		transaction.setSupplyDemand(supplyDemand);
-//		transaction.setAmount(BigDecimal.valueOf(Double.parseDouble(amount.getText())));
 		
 		return temporaryTransaction;
 	}
@@ -145,9 +126,6 @@ public class TransactionEditControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		String messageToDisplay =I18n.getI18nMessages().dataSaved();
-//		(new DialogBoxMessage(messageToDisplay)).show();
 	}
 	private IActionToTransmit<TransactionLocalDto> clickHandlerToTransmit() {
 		return new IActionToTransmit<TransactionLocalDto>() {

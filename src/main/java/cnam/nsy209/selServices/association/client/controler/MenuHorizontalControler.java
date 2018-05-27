@@ -52,7 +52,6 @@ public class MenuHorizontalControler {
 						}
 					};
 					t.schedule(0);
-//					RootPanel.get().add(new AssociationDisplayPage(width,height,AssociationDisplay.get()));
 				}
 				if(enumMenu.equals(EnumMenuHorizontal.CATEGORY_EDIT)) {	
 					model.onWaitingDisplay();
@@ -64,7 +63,6 @@ public class MenuHorizontalControler {
 						}
 					};
 					t.schedule(0);
-//					RootPanel.get().add(new CategoriesDisplayPage(width,height));
 				}
 				if(enumMenu.equals(EnumMenuHorizontal.MEMBER_CARD)) {
 					if(ElementToDisplay.enumOrigin.equals(EnumMenuHorizontal.HOME)) {
@@ -77,7 +75,6 @@ public class MenuHorizontalControler {
 							}
 						};
 						t.schedule(0);
-//						RootPanel.get().add(new HomePage(width,height));
 					}
 					else if(ElementToDisplay.enumOrigin.equals(EnumMenuHorizontal.MEMBER_HOME)) {
 						model.onWaitingDisplay();
@@ -89,7 +86,6 @@ public class MenuHorizontalControler {
 							}
 						};
 						t.schedule(0);
-//							RootPanel.get().add(new MemberHomePage(width,height));
 					}
 					else if(ElementToDisplay.enumOrigin.equals(EnumMenuHorizontal.MEMBER_RESEARCH_RESULT)) {
 						MembersResearchResultPage page = new MembersResearchResultPage(width,
@@ -107,7 +103,6 @@ public class MenuHorizontalControler {
 							}
 						};
 						t.schedule(0);
-//						RootPanel.get().add(new HomePage(width,height));
 					}
 				}
 				if(enumMenu.equals(EnumMenuHorizontal.MEMBER_CREATE)) {
@@ -120,7 +115,6 @@ public class MenuHorizontalControler {
 						}
 					};
 					t.schedule(0);
-//					RootPanel.get().add(new MemberHomePage(width,height));
 				}
 				if(enumMenu.equals(EnumMenuHorizontal.MEMBER_EDIT)) {
 					RootPanel.get().add(new MemberCardPage(width,height,ElementToDisplay.dto));
@@ -135,7 +129,6 @@ public class MenuHorizontalControler {
 						}
 					};
 					t.schedule(0);
-//					RootPanel.get().add(new MemberHomePage(width,height));
 				}
 				if(enumMenu.equals(EnumMenuHorizontal.MEMBER_RESEARCH_RESULT)) {
 					RootPanel.get().add(new MemberResearchPage(width,height));
@@ -150,7 +143,6 @@ public class MenuHorizontalControler {
 						}
 					};
 					t.schedule(0);
-//					RootPanel.get().add(new WealthSheetDisplayPage(width,height,ElementToDisplay.dto));
 				}
 				if(enumMenu.equals(EnumMenuHorizontal.WEALTHSHEET_DISPLAY)) {
 					RootPanel.get().add(new MemberCardPage(width,height,ElementToDisplay.dto));

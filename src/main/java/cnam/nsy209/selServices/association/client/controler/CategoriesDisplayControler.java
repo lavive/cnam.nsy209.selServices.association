@@ -84,9 +84,5 @@ public class CategoriesDisplayControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		List<CategoryDto> categories = model.getCategories();
-//		categories.remove(category);
-//		model.onSet(categories);
 	}
 }

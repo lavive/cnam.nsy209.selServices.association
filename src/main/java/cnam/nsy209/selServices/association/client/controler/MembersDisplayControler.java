@@ -54,7 +54,6 @@ public class MembersDisplayControler {
 		return new ActionCell<MemberLocalDto>(I18n.getI18nConstants().look(), new ActionCell.Delegate<MemberLocalDto>() {
 			 @Override
 			 public void execute(MemberLocalDto member) {
-				 //Window.alert("You want to see: " + member.getName());
 				 look(member);
 			 }
 		 });
@@ -113,10 +112,6 @@ public class MembersDisplayControler {
 			}
 		};
 		t.schedule(1000);
-//		/******Asynck******/
-//		List<MemberDto> members = model.getMembers();
-//		members.remove(member);
-//		model.onSet(members);
 	}
 	
 	private void deleteLastMember(final MemberLocalDto member) {
@@ -129,10 +124,6 @@ public class MembersDisplayControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		List<MemberDto> members = model.getMembers();
-//		members.remove(member);
-//		model.onSet(members);
 	}
 	
 	private void deleteResultMember(final MemberLocalDto member,final MemberLocalDto attributes) {
@@ -145,14 +136,10 @@ public class MembersDisplayControler {
 			}
 		};
 		t.schedule(1000);
-//		/******Asynck******/
-//		List<MemberDto> members = model.getMembers();
-//		members.remove(member);
-//		model.onSet(members);
 	}
 	
 	private void look(MemberLocalDto member) {
-//		/******Asynck******/
+
 		RootPanel.get().clear();
 		RootPanel.get().add(new MemberCardPage(this.width,this.height,member));
 	}

@@ -62,22 +62,22 @@ public class MemberResearchControler {
 			public void onClick(ClickEvent event) {	
 				MemberLocalDto member = buildMember();
 				if(box == name) {
-					model.onDisplay(member, EnumField.MEMBER_NAME_RESEARCH);//if(model.getMemberNameError() != null) model.setMemberNameError(null);
+					model.onDisplay(member, EnumField.MEMBER_NAME_RESEARCH);
 				}
 				if(box == forname) {
-					model.onDisplay(member, EnumField.MEMBER_FORNAME_RESEARCH);//if(model.getMemberFornameError() != null) model.setMemberFornameError(null);
+					model.onDisplay(member, EnumField.MEMBER_FORNAME_RESEARCH);
 				}
 				if(box == address) {
-					model.onDisplay(member, EnumField.MEMBER_ADDRESS_RESEARCH);//if(model.getMemberAddressError() != null) model.setMemberAddressError(null);
+					model.onDisplay(member, EnumField.MEMBER_ADDRESS_RESEARCH);
 				}
 				if(box == postalCode) {
-					model.onDisplay(member, EnumField.MEMBER_POSTAL_CODE_RESEARCH);//if(model.getMemberPostalCodeError() != null) model.setMemberPostalCodeError(null);
+					model.onDisplay(member, EnumField.MEMBER_POSTAL_CODE_RESEARCH);
 				}
 				if(box == town) {
-					model.onDisplay(member, EnumField.MEMBER_TOWN_RESEARCH);//if(model.getMemberTownError() != null) model.setMemberTownError(null);
+					model.onDisplay(member, EnumField.MEMBER_TOWN_RESEARCH);
 				}
 				if(box == cellNumber) {
-					model.onDisplay(member, EnumField.MEMBER_CELL_NUMBER_RESEARCH);//if(model.getMemberCellNumberError() != null) model.setMemberCellNumberError(null);
+					model.onDisplay(member, EnumField.MEMBER_CELL_NUMBER_RESEARCH);
 				}
 			}
 		};
@@ -164,8 +164,5 @@ public class MemberResearchControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		String messageToDisplay =I18n.getI18nMessages().dataNotSended();
-//		(new DialogBoxMessage(messageToDisplay)).show();
 	}
 }

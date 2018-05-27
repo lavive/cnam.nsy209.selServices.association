@@ -53,10 +53,6 @@ public class MessagesDisplayControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		List<MessageDto> supplies = model.getMessages();
-//		supplies.remove(message);
-//		model.onSet(supplies);
 	}
 	private IActionToTransmit<MessageLocalDto> clickHandlerToTransmit() {
 		return new IActionToTransmit<MessageLocalDto>() {

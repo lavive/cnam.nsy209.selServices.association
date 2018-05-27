@@ -3,7 +3,6 @@ package cnam.nsy209.selServices.association.client.controler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Timer;
-import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.TextBox;
 
 import cnam.nsy209.selServices.association.client.asyncCallback.MemberAsyncCallback;
@@ -59,9 +58,6 @@ public class MemberEditControler {
 						 dialogBox.show();
 					}
 				}
-//				MemberDto member = buildMember();
-//				model.onDisplay(member);
-//				if(model.noError()) sendData(member,update);
 			}
 		};
 		
@@ -76,31 +72,31 @@ public class MemberEditControler {
 			public void onClick(ClickEvent event) {	
 				MemberLocalDto member = buildMember();
 				if(box == name) {
-					model.onDisplay(member, EnumField.MEMBER_NAME);//if(model.getMemberNameError() != null) model.setMemberNameError(null);
+					model.onDisplay(member, EnumField.MEMBER_NAME);
 				}
 				if(box == forname) {
-					model.onDisplay(member, EnumField.MEMBER_FORNAME);//if(model.getMemberFornameError() != null) model.setMemberFornameError(null);
+					model.onDisplay(member, EnumField.MEMBER_FORNAME);
 				}
 				if(box == address) {
-					model.onDisplay(member, EnumField.MEMBER_ADDRESS);//if(model.getMemberAddressError() != null) model.setMemberAddressError(null);
+					model.onDisplay(member, EnumField.MEMBER_ADDRESS);
 				}
 				if(box == postalCode) {
-					model.onDisplay(member, EnumField.MEMBER_POSTAL_CODE);//if(model.getMemberPostalCodeError() != null) model.setMemberPostalCodeError(null);
+					model.onDisplay(member, EnumField.MEMBER_POSTAL_CODE);
 				}
 				if(box == town) {
-					model.onDisplay(member, EnumField.MEMBER_TOWN);//if(model.getMemberTownError() != null) model.setMemberTownError(null);
+					model.onDisplay(member, EnumField.MEMBER_TOWN);
 				}
 				if(box == email) {
-					model.onDisplay(member, EnumField.MEMBER_EMAIL);//if(model.getMemberEmailError() != null) model.setMemberEmailError(null);
+					model.onDisplay(member, EnumField.MEMBER_EMAIL);
 				}
 				if(box == cellNumber) {
-					model.onDisplay(member, EnumField.MEMBER_CELL_NUMBER);//if(model.getMemberCellNumberError() != null) model.setMemberCellNumberError(null);
+					model.onDisplay(member, EnumField.MEMBER_CELL_NUMBER);
 				}
 				if(box == phoneNumber) {
-					model.onDisplay(member, EnumField.MEMBER_PHONE_NUMBER);//if(model.getMemberPhoneNumberError() != null) model.setMemberPhoneNumberError(null);
+					model.onDisplay(member, EnumField.MEMBER_PHONE_NUMBER);
 				}
 				if(box == password) {
-					model.onDisplay(member, EnumField.MEMBER_PASSWORD);//if(model.getMemberPasswordError() != null) model.setMemberPasswordError(null);
+					model.onDisplay(member, EnumField.MEMBER_PASSWORD);
 				}
 				if(box == initialAccount) {
 					model.onDisplay(member, EnumField.AMOUNT);
@@ -228,9 +224,6 @@ public class MemberEditControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		String messageToDisplay =I18n.getI18nMessages().dataSaved();
-//		(new DialogBoxMessage(messageToDisplay)).show();
 	}
 	private IActionToTransmit<MemberLocalDto> clickHandlerUpdateToTransmit() {
 		return new IActionToTransmit<MemberLocalDto>() {
@@ -245,10 +238,7 @@ public class MemberEditControler {
 		return new IActionToTransmit<MemberLocalDto>() {
 			@Override
 			public void action(MemberLocalDto member) {
-//				model.onDisplay(member);
-//				if(model.noError()) {
 					sendData(member,false);	
-//				}
 				
 			}
       };

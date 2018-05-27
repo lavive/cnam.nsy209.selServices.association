@@ -61,31 +61,31 @@ public class AssociationEditControler {
 			public void onClick(ClickEvent event) {	
 				AssociationLocalDto association = buildAssociation();
 				if(box == name) {
-					model.onDisplay(association, EnumField.ASSOCIATION_NAME);//if(model.getMemberNameError() != null) model.setMemberNameError(null);
+					model.onDisplay(association, EnumField.ASSOCIATION_NAME);
 				}
 				if(box == address) {
-					model.onDisplay(association, EnumField.ASSOCIATION_ADDRESS);//if(model.getMemberAddressError() != null) model.setMemberAddressError(null);
+					model.onDisplay(association, EnumField.ASSOCIATION_ADDRESS);
 				}
 				if(box == postalCode) {
-					model.onDisplay(association, EnumField.ASSOCIATION_POSTAL_CODE);//if(model.getMemberPostalCodeError() != null) model.setMemberPostalCodeError(null);
+					model.onDisplay(association, EnumField.ASSOCIATION_POSTAL_CODE);
 				}
 				if(box == town) {
-					model.onDisplay(association, EnumField.ASSOCIATION_TOWN);//if(model.getMemberTownError() != null) model.setMemberTownError(null);
+					model.onDisplay(association, EnumField.ASSOCIATION_TOWN);
 				}
 				if(box == email) {
-					model.onDisplay(association, EnumField.ASSOCIATION_EMAIL);//if(model.getMemberEmailError() != null) model.setMemberEmailError(null);
+					model.onDisplay(association, EnumField.ASSOCIATION_EMAIL);
 				}
 				if(box == cellNumber) {
-					model.onDisplay(association, EnumField.ASSOCIATION_CELL_NUMBER);//if(model.getMemberCellNumberError() != null) model.setMemberCellNumberError(null);
+					model.onDisplay(association, EnumField.ASSOCIATION_CELL_NUMBER);
 				}
 				if(box == phoneNumber) {
-					model.onDisplay(association, EnumField.ASSOCIATION_PHONE_NUMBER);//if(model.getMemberPhoneNumberError() != null) model.setMemberPhoneNumberError(null);
+					model.onDisplay(association, EnumField.ASSOCIATION_PHONE_NUMBER);
 				}
 				if(box == webSite) {
-					model.onDisplay(association, EnumField.ASSOCIATION_WEB_SITE);//if(model.getMemberFornameError() != null) model.setMemberFornameError(null);
+					model.onDisplay(association, EnumField.ASSOCIATION_WEB_SITE);
 				}
 				if(box == password) {
-					model.onDisplay(association, EnumField.ASSOCIATION_PASSWORD);//if(model.getMemberPasswordError() != null) model.setMemberPasswordError(null);
+					model.onDisplay(association, EnumField.ASSOCIATION_PASSWORD);
 				}
 			}
 		};
@@ -197,9 +197,6 @@ public class AssociationEditControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		String messageToDisplay =I18n.getI18nMessages().dataSaved();
-//		(new DialogBoxMessage(messageToDisplay)).show();
 	}
 	private IActionToTransmit<AssociationLocalDto> clickHandlerToTransmit() {
 		return new IActionToTransmit<AssociationLocalDto>() {

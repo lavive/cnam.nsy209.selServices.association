@@ -39,10 +39,7 @@ public class FastMessageControler {
 							 I18n.getI18nMessages().sure(),clickHandlerToTransmit());
 					 dialogBox.center();
 					 dialogBox.show();
-					 //sendData(buildCategory());
 				}
-//				model.onDisplay(message.getText());
-//				if(model.noError()) send(message.getText());
 			}
 		};
 		
@@ -105,7 +102,6 @@ public class FastMessageControler {
 	/* helper method */
 	private MessageLocalDto buildMessage() {
 		MessageLocalDto message = new MessageLocalDto();
-//		message.setDateLastUpdate(new Date());
 		message.setTitle(title.getText());
 		message.setText(text.getText());
 		AssociationLocalDto emitter = new AssociationLocalDto();
@@ -127,9 +123,6 @@ public class FastMessageControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		String messageToDisplay = message+": \n"+I18n.getI18nMessages().messageSaved();
-//		(new DialogBoxMessage(messageToDisplay)).show();
 	}
 	
 	private IActionToTransmit<MessageLocalDto> clickHandlerToTransmit() {

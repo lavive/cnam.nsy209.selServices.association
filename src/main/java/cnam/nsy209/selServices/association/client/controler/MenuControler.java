@@ -27,7 +27,6 @@ public class MenuControler {
 	private int width;
 	private int height;
 	private Button activedButton;
-	//private HashMap<Button,Boolean> buttons;
 	
 	/* Constructors */
 	public MenuControler(int width, int height, List<Button> buttons) {
@@ -35,7 +34,6 @@ public class MenuControler {
 		this.model.onInitialise(buttons);
 		this.height = height;
 		this.width = width;
-//		this.buttons  = new HashMap<Button,Boolean>();
 	}
 	
 	/* get the handler for Home button */
@@ -58,9 +56,6 @@ public class MenuControler {
 					}
 				};
 				t.schedule(0);
-//				MenuControler.this.model.onActiveButton(button);
-//				RootPanel.get().clear();
-//				RootPanel.get().add(new HomePage(MenuControler.this.width,MenuControler.this.height));
 			}
 		};
 		
@@ -87,10 +82,6 @@ public class MenuControler {
 					}
 				};
 				t.schedule(0);
-//				MenuControler.this.m
-//				MenuControler.this.model.onActiveButton(button);
-//				RootPanel.get().clear();
-//				RootPanel.get().add(new MemberHomePage(MenuControler.this.width,MenuControler.this.height));
 			}
 		};
 		
@@ -117,9 +108,6 @@ public class MenuControler {
 					}
 				};
 				t.schedule(0);
-//				MenuControler.this.model.onActiveButton(button);	
-//				RootPanel.get().clear();
-//				RootPanel.get().add(new SuppliesDisplayPage(MenuControler.this.width,MenuControler.this.height));
 			}
 		};
 		
@@ -149,9 +137,6 @@ public class MenuControler {
 					}
 				};
 				t.schedule(0);
-//				MenuControler.this.model.onActiveButton(button);	
-//				RootPanel.get().clear();
-//				RootPanel.get().add(new MessagesDisplayPage(MenuControler.this.width,MenuControler.this.height));
 			}
 		};
 		
@@ -178,9 +163,6 @@ public class MenuControler {
 					}
 				};
 				t.schedule(0);
-//				MenuControler.this.model.onActiveButton(button);	
-//				RootPanel.get().clear();
-//				RootPanel.get().add(new MessagesDisplayPage(MenuControler.this.width,MenuControler.this.height));
 			}
 		};
 		
@@ -207,9 +189,6 @@ public class MenuControler {
 					}
 				};
 				t.schedule(0);
-//				MenuControler.this.model.onActiveButton(button);	
-//				RootPanel.get().clear();
-//				RootPanel.get().add(new MessagesDisplayPage(MenuControler.this.width,MenuControler.this.height));
 			}
 		};
 		
@@ -236,9 +215,6 @@ public class MenuControler {
 					}
 				};
 				t.schedule(0);
-//				MenuControler.this.model.onActiveButton(button);	
-//				RootPanel.get().clear();
-//				RootPanel.get().add(new CategoriesDisplayPage(MenuControler.this.width,MenuControler.this.height));
 			}
 		};
 		
@@ -265,13 +241,6 @@ public class MenuControler {
 					}
 				};
 				t.schedule(0);
-//				MenuControler.this.model.onActiveButton(button);	
-//				RootPanel.get().clear();
-//				/** for the test **/
-//				AssociationDto dto = AssociationDisplay.get();
-//				/******************/
-//				RootPanel.get().add(new AssociationDisplayPage(
-//						MenuControler.this.width,MenuControler.this.height,dto));
 			}
 		};
 		
@@ -291,9 +260,5 @@ public class MenuControler {
 	public void setActivedButton(Button activedButton) {
 		this.activedButton = activedButton;
 	}
-
-//	public HashMap<Button, Boolean> getButtons() {
-//		return buttons;
-//	}
 
 }

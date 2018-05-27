@@ -36,7 +36,6 @@ public class CategoryEditControler {
 							 I18n.getI18nMessages().sure(),clickHandlerToTransmit());
 					 dialogBox.center();
 					 dialogBox.show();
-					 //sendData(buildCategory());
 				}
 			}
 		};
@@ -91,9 +90,6 @@ public class CategoryEditControler {
 			}
 		};
 		t.schedule(0);
-//		/******Asynck******/
-//		String messageToDisplay =I18n.getI18nMessages().dataSaved();
-//		(new DialogBoxMessage(messageToDisplay)).show();
 	}
 	private IActionToTransmit<CategoryLocalDto> clickHandlerToTransmit() {
 		return new IActionToTransmit<CategoryLocalDto>() {
