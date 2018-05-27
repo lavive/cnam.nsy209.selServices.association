@@ -18,6 +18,13 @@ import cnam.nsy209.selServices.association.shared.exception.DoNotExistException;
 import cnam.nsy209.selServices.association.shared.exception.EmptyException;
 import cnam.nsy209.selServices.association.shared.localDto.MessageLocalDto;
 
+/** 
+ * 
+ * Class to manage result from Message service call
+ * 
+ * @author lavive
+ *
+ */
 public class MessageAsyncCallback {
 	/* attributes */
 	private AsyncCallback<List<MessageLocalDto>> addCallback;

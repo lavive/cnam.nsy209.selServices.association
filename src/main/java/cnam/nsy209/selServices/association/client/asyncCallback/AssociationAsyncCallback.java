@@ -15,6 +15,14 @@ import cnam.nsy209.selServices.association.client.view.page.AssociationDisplayPa
 import cnam.nsy209.selServices.association.shared.exception.AssociationException;
 import cnam.nsy209.selServices.association.shared.localDto.AssociationLocalDto;
 
+/** 
+ * 
+ * Class to manage result from Association service call
+ * 
+ * @author lavive
+ *
+ */
+
 public class AssociationAsyncCallback {
 
 	/* attributes */

@@ -23,6 +23,13 @@ import cnam.nsy209.selServices.association.shared.exception.DoNotExistException;
 import cnam.nsy209.selServices.association.shared.localDto.EnumSupplyDemandDto;
 import cnam.nsy209.selServices.association.shared.localDto.SupplyDemandLocalDto;
 
+/** 
+ * 
+ * Class to manage result from SupplyDemand service call
+ * 
+ * @author lavive
+ *
+ */
 public class SupplyDemandAsyncCallback {
 	/* attributes */
 	private AsyncCallback<List<SupplyDemandLocalDto>> getCallback;
@@ -120,9 +127,7 @@ public class SupplyDemandAsyncCallback {
 		ServicesProxy.getSuppliesDemandsService().delete(supplyDemand, deleteCallback);
 	}	
 
-	public void /*List<SupplyDemandDto>*/ getSuppliesDemandsForListBox() {
-		
-//		final List<SupplyDemandDto> suppliesDemands = new ArrayList<SupplyDemandDto>();
+	public void getSuppliesDemandsForListBox() {
 		
 		getForListCallback = new AsyncCallback<List<SupplyDemandLocalDto>>() {
 	
@@ -135,9 +140,6 @@ public class SupplyDemandAsyncCallback {
 	
 			@Override
 			public void onSuccess(List<SupplyDemandLocalDto> result) {
-//				for(SupplyDemandDto supplyDemand:result) {
-//					suppliesDemands.add(supplyDemand);
-//				}
 				TransactionEditModel.get().setSuppliesDemandsForList(result);
 			}
 			
@@ -145,7 +147,6 @@ public class SupplyDemandAsyncCallback {
 		
 		ServicesProxy.getSuppliesDemandsService().getSuppliesDemands(null,getForListCallback);
 		
-//		return suppliesDemands;
 	}
 	
 	public void getSupplyDemand(final long id, final SupplyDemandLocalDto supplyDemandDto) {

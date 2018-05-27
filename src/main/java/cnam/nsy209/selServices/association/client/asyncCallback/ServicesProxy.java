@@ -17,6 +17,13 @@ import cnam.nsy209.selServices.association.client.services.SuppliesDemandsServic
 import cnam.nsy209.selServices.association.client.services.TransactionsService;
 import cnam.nsy209.selServices.association.client.services.TransactionsServiceAsync;
 
+/** 
+ * 
+ * Class to manage all services call
+ * 
+ * @author lavive
+ *
+ */
 public class ServicesProxy {
 
 	/* instances of services proxy */

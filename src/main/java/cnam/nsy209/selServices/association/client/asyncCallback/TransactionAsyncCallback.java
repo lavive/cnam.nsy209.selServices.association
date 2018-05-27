@@ -16,6 +16,13 @@ import cnam.nsy209.selServices.association.shared.localDto.MemberLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.TransactionLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.WealthSheetLocalDto;
 
+/** 
+ * 
+ * Class to manage result from Transaction service call
+ * 
+ * @author lavive
+ *
+ */
 public class TransactionAsyncCallback {
 	/* attributes */
 	private AsyncCallback<Void> addCallback;

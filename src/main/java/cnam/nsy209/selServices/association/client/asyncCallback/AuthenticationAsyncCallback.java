@@ -16,6 +16,14 @@ import cnam.nsy209.selServices.association.client.view.page.concretePage.main.Me
 import cnam.nsy209.selServices.association.shared.exception.AuthenticationException;
 import cnam.nsy209.selServices.association.shared.localDto.MemberLocalDto;
 
+/** 
+ * 
+ * Class to manage result from Authentication service call
+ * 
+ * @author lavive
+ *
+ */
+
 public class AuthenticationAsyncCallback {
 
 	/* attributes */
@@ -40,15 +48,10 @@ public class AuthenticationAsyncCallback {
 			@Override
 			public void onSuccess(List<MemberLocalDto> result) {
 				
-//					MemberAsyncCallback homeCallback = new MemberAsyncCallback();
-//					homeCallback.getLastMembers(null,true);
-//					Window.alert("login: "+loginInput.getText()+" /password: "+passwordInput.getText());	
-//					controler.initialize(loginInput.getText());
 					RootPanel.get().clear();
 					HomePage page = new HomePage(controler.getWidth(),controler.getHeight());
 					MembersDisplay.get().getMembersTable().getControler().getModel().onSet(result);
 					RootPanel.get().add(page);
-//					AuthenticationAsyncCallback.this.goHome();
 					
 			}
 			

@@ -19,6 +19,14 @@ import cnam.nsy209.selServices.association.shared.exception.DoNotExistException;
 import cnam.nsy209.selServices.association.shared.exception.EmptyException;
 import cnam.nsy209.selServices.association.shared.localDto.CategoryLocalDto;
 
+
+/** 
+ * 
+ * Class to manage result from Category service call
+ * 
+ * @author lavive
+ *
+ */
 public class CategoryAsyncCallback {
 
 	/* attributes */
@@ -126,7 +134,6 @@ public class CategoryAsyncCallback {
 	
 			@Override
 			public void onSuccess(List<CategoryLocalDto> result) {
-//				CategoriesDisplay.get().getCategoriesTable().getControler().getModel().onSet(result);
 				categoriesDisplayControler.getModel().onSet(result);				
 			}
 			

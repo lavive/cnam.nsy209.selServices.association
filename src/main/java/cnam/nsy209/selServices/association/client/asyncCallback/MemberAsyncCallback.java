@@ -26,6 +26,13 @@ import cnam.nsy209.selServices.association.shared.exception.DoNotExistException;
 import cnam.nsy209.selServices.association.shared.exception.EmptyException;
 import cnam.nsy209.selServices.association.shared.localDto.MemberLocalDto;
 
+/** 
+ * 
+ * Class to manage result from Member service call
+ * 
+ * @author lavive
+ *
+ */
 public class MemberAsyncCallback {
 	
 	private static final int NUMBER_TO_DISPLAY = 9;
@@ -90,9 +97,6 @@ public class MemberAsyncCallback {
 			}
 			
 		};
-//		DialogBox test = new DialogBox();
-//		test.setText("2id: "+member.getId()+ ": "+member);
-//		test.show();
 		
 		ServicesProxy.getMembersService().create(member, addCallback);
 	}
@@ -197,8 +201,6 @@ public class MemberAsyncCallback {
 				if(caught instanceof DoNotExistException) {
 					RootPanel.get().clear();
 					MembersResearchResultPage page = new MembersResearchResultPage(width,height,attributes);
-//					MembersResultDisplay.get(attributes).getMembersTable().getControler().getModel()
-//								.onSet(new ArrayList<MemberLocalDto>());
 					MembersDisplay.get().getMembersTable().getControler().getModel()
 								.onSet(new ArrayList<MemberLocalDto>());
 					RootPanel.get().add(page);
@@ -214,8 +216,6 @@ public class MemberAsyncCallback {
 			public void onSuccess(List<MemberLocalDto> result) {
 				RootPanel.get().clear();
 				MembersResearchResultPage page = new MembersResearchResultPage(width,height,attributes);
-//				MembersResultDisplay.get(attributes).getMembersTable().getControler().getModel()
-//							.onSet(result);
 				MembersDisplay.get().getMembersTable().getControler().getModel().onSet(result);
 				RootPanel.get().add(page);
 			}
@@ -225,33 +225,7 @@ public class MemberAsyncCallback {
 		ServicesProxy.getMembersService().getMembers(attributes,getResearchCallback);
 	}
 	
-//	public void deleteMember(MemberDto member, List<MemberDto> members) {
-//			
-//		deleteCallback = new AsyncCallback<List<MemberDto>>() {
-//	
-//			@Override
-//			public void onFailure(Throwable caught) {
-//				if(caught instanceof DoNotExistException) {
-//					DialogBoxMessage message = new DialogBoxMessage(((DoNotExistException) caught).message());
-//					message.center();
-//					message.show();
-//				} else {
-//					DialogBoxMessage message = new DialogBoxMessage(I18n.getI18nMessages().netWorkError());
-//					message.center();
-//					message.show();
-//				}
-//			}
-//	
-//			@Override
-//			public void onSuccess(List<MemberDto> result) {
-////				MembersDisplay.get().getMembersTable().getControler().getModel().onSet(result);
-//				membersDisplayControler.getModel().onSet(result);				
-//			}
-//			
-//		};
-//		
-//		ServicesProxy.getMembersService().delete(member, members, deleteCallback);
-//	}
+
 	public void deleteMember(MemberLocalDto member) {
 		
 		deleteCallback = new AsyncCallback<List<MemberLocalDto>>() {
@@ -271,7 +245,6 @@ public class MemberAsyncCallback {
 	
 			@Override
 			public void onSuccess(List<MemberLocalDto> result) {
-//				MembersDisplay.get().getMembersTable().getControler().getModel().onSet(result);
 				membersDisplayControler.getModel().onSet(result);				
 			}
 			
@@ -299,7 +272,6 @@ public class MemberAsyncCallback {
 	
 			@Override
 			public void onSuccess(List<MemberLocalDto> result) {
-//				MembersDisplay.get().getMembersTable().getControler().getModel().onSet(result);
 				membersDisplayControler.getModel().onSet(result);				
 			}
 			
@@ -327,7 +299,6 @@ public class MemberAsyncCallback {
 	
 			@Override
 			public void onSuccess(List<MemberLocalDto> result) {
-//				MembersDisplay.get().getMembersTable().getControler().getModel().onSet(result);
 				membersDisplayControler.getModel().onSet(result);				
 			}
 			
@@ -336,9 +307,8 @@ public class MemberAsyncCallback {
 		ServicesProxy.getMembersService().deleteLastMember(member, NUMBER_TO_DISPLAY, deleteCallback);
 	}	
 	
-	public void/*List<MemberDto>*/ getMembersForListBox() {
+	public void getMembersForListBox() {
 		
-//		final List<MemberDto> members = new ArrayList<MemberDto>();
 		
 		getForListCallback = new AsyncCallback<List<MemberLocalDto>>() {
 	
@@ -351,9 +321,6 @@ public class MemberAsyncCallback {
 	
 			@Override
 			public void onSuccess(List<MemberLocalDto> result) {
-//				for(MemberDto member:result) {
-//					members.add(member);
-//				}
 				TransactionEditModel.get().setMembersForList(result);
 				MemberResearchModel.get().setMembersForList(result);
 			}
@@ -362,7 +329,6 @@ public class MemberAsyncCallback {
 		
 		ServicesProxy.getMembersService().getMembers(getForListCallback);
 		
-//		return members;
 	}
 
 	public void getMember(final long id, final MemberLocalDto member) {
