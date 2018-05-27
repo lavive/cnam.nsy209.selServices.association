@@ -36,7 +36,6 @@ public class TransactionEdit extends AbstractPage implements Observer {
 	
 	/* attributes */
 	private FlexTable layout;
-//	private WaitingTransfer waiting;
 	private Button validate;
 	private TransactionEditControler controler;
 
@@ -86,14 +85,9 @@ public class TransactionEdit extends AbstractPage implements Observer {
 		}
 		/* validate button and waiting message */
 		if(transactionEditModel.isWaiting()) {
-//			DialogBoxWaiting.get(0, 0).show();
 			validate.setEnabled(false);
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
-			validate.setEnabled(true);
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();			
+			validate.setEnabled(true);			
 		}
 	}
 
@@ -131,26 +125,15 @@ public class TransactionEdit extends AbstractPage implements Observer {
 	    /* Add fields to display */
 	    layout.setHTML(1, 0, I18n.getI18nConstants().creditor());
 	    ListBox creditor = new ListBox();
-//	    this.controler.getModel().setMembersForList();
-//	    for(MemberDto member:this.controler.getModel().getMembersForList()) {
-//	    	creditor.addItem(member.getFullName());
-//	    }
 	    layout.setWidget(2, 0,creditor);
 
 	    layout.setHTML(1, 1, I18n.getI18nConstants().debtor());
 	    ListBox debtor = new ListBox();
-//	    this.controler.getModel().setMembersForList();
-//	    for(MemberDto member:this.controler.getModel().getMembersForList()) {
-//	    	debtor.addItem(member.getFullName());
-//	    }
 	    layout.setWidget(2, 1,debtor);
 	    
 	    layout.setHTML(1, 2, I18n.getI18nConstants().supplyDemand());
 	    ListBox supplyDemandBox = new ListBox();
 	    this.controler.getModel().setSuppliesDemandsForList();
-//	    for(SupplyDemandDto supplyDemand:this.controler.getModel().getSuppliesDemandsForList()) {
-//	    	supplyDemandBox.addItem(supplyDemand.getTitle());
-//	    }
 	    layout.setWidget(2, 2,supplyDemandBox);
 	    	    
 	    layout.setHTML(1, 3, I18n.getI18nConstants().amount());
@@ -170,12 +153,6 @@ public class TransactionEdit extends AbstractPage implements Observer {
 	    layout.setWidget(4, 0, validate);
 	    cellFormatter.setColSpan(4, 0, 4);
 	    cellFormatter.setHorizontalAlignment(4, 0, HasHorizontalAlignment.ALIGN_CENTER);
-	    
-	    /* Add a waiting message to the form */
-//		waiting = new WaitingTransfer();
-//	    layout.setWidget(5, 0, waiting);
-//	    cellFormatter.setColSpan(5, 0, 4);
-//	    cellFormatter.setHorizontalAlignment(5, 0, HasHorizontalAlignment.ALIGN_CENTER);
 
 	    
 	    /* style */

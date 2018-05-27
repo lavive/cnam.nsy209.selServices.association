@@ -33,7 +33,6 @@ public class AssociationEdit extends AbstractPage implements Observer {
 	
 	/* attributes */
 	private FlexTable layout;
-//	private WaitingTransfer waiting;
 	private Button validate;
 	private AssociationEditControler controler;
 
@@ -106,12 +105,8 @@ public class AssociationEdit extends AbstractPage implements Observer {
 		/* validate button and waiting message */
 		if(associationEditModel.isWaiting()) {
 			validate.setEnabled(false);
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
-			this.validate.setEnabled(true);
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();			
+			this.validate.setEnabled(true);		
 		}
 	}
 
@@ -209,8 +204,6 @@ public class AssociationEdit extends AbstractPage implements Observer {
 	    cellFormatter.setHorizontalAlignment(10, 0, HasHorizontalAlignment.ALIGN_CENTER);
 	    
 	    /* Add a waiting message to the form */
-//		waiting = new WaitingTransfer();
-//	    layout.setWidget(11, 0, waiting);
 	    cellFormatter.setColSpan(11, 0, 2);
 	    cellFormatter.setHorizontalAlignment(11, 0, HasHorizontalAlignment.ALIGN_CENTER);
 

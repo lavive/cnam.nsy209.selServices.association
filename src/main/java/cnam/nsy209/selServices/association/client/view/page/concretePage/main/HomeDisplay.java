@@ -30,7 +30,7 @@ public class HomeDisplay extends AbstractPage implements Observer {
 	}
 
 	/* Attribute */
-	private List<MemberLocalDto> members;// = new ArrayList<MemberDto>();
+	private List<MemberLocalDto> members;
 	private MembersCellTable membersTable;
 	
 	/* Constructor */

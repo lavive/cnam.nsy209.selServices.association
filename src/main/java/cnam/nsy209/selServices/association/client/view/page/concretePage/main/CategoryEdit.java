@@ -32,7 +32,6 @@ public class CategoryEdit extends AbstractPage implements Observer {
 	
 	/* attributes */
 	private FlexTable layout;
-//	private WaitingTransfer waiting;
 	private Button validate;
 	private CategoryEditControler controler;
 
@@ -57,12 +56,8 @@ public class CategoryEdit extends AbstractPage implements Observer {
 		/* validate button and waiting message */
 		if(categoryEditModel.isWaiting()) {
 			validate.setEnabled(false);
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
-			this.validate.setEnabled(true);
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();			
+			this.validate.setEnabled(true);	
 		}
 	}
 
@@ -112,12 +107,6 @@ public class CategoryEdit extends AbstractPage implements Observer {
 	    cellFormatter.setColSpan(2, 0, 2);
 	    cellFormatter.setHorizontalAlignment(2, 0, HasHorizontalAlignment.ALIGN_CENTER);
 	    
-	    /* Add a waiting message to the form */
-//		waiting = new WaitingTransfer();
-//	    layout.setWidget(3, 0, waiting);
-//	    cellFormatter.setColSpan(3, 0, 2);
-//	    cellFormatter.setHorizontalAlignment(3, 0, HasHorizontalAlignment.ALIGN_CENTER);
-
 	    
 	    /* style */
 	    cellFormatter.setStyleName(0, 0, "titleFontFlexTable");

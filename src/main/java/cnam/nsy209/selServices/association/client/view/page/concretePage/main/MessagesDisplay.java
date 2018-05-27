@@ -66,7 +66,7 @@ public class MessagesDisplay extends AbstractPage implements Observer {
 		/**********************************************************************************/
 		
 		/*********** Data Grid Member *****************************************************/
-		messages =  new ArrayList<MessageLocalDto>();//MessageCellTable.message();
+		messages =  new ArrayList<MessageLocalDto>();
 		messagesTable = new MessageCellTable(width,height,I18n.getI18nMessages().noMessage(),messages);
 		/**********************************************************************************/
 		

@@ -154,10 +154,7 @@ public class MemberDisplay extends AbstractPage implements Observer {
 	    
 	    panel.add(decPanel);
 		/**********************************************************************************/
-//        MemberLocalDto member = (MemberLocalDto) dto;
-//        DialogBox test = new DialogBox();
-//        test.setText(member+": "+member.getWealthSheet());
-//        test.show();
+
         
 	    return panel;
 	}

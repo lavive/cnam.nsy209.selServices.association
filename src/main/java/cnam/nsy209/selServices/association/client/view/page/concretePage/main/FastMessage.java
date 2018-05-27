@@ -38,9 +38,7 @@ public class FastMessage extends AbstractPage implements Observer {
 	
 	/* Attribute */
 	private FlexTable layout;
-//	private WaitingTransfer waiting;
 	private FastMessageControler controler;
-//	private TextArea edit;
 	private Button send;
 	private Button reset;
 
@@ -66,13 +64,9 @@ public class FastMessage extends AbstractPage implements Observer {
 		if(fastMessageModel.isWaiting()) {
 			this.send.setEnabled(false);
 			this.reset.setEnabled(false);
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
 			this.send.setEnabled(true);
 			this.reset.setEnabled(true);
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();	
 		}
 	}
 
@@ -95,64 +89,17 @@ public class FastMessage extends AbstractPage implements Observer {
 		/* Style */
 		panel.setWidth(width+"px");
 		panel.setHeight(height+"px");
-//		panel.getElement().getStyle().setBackgroundColor(I18n.getI18nConstants().backgroundColor());
 		panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
 		VerticalPanel emptyPanel = new VerticalPanel();
 		emptyPanel.setWidth(0.15*width+"px");
 		/**********************************************************************************/
-		
-//		/*********** Label Title **********************************************************/
-//		Label titleLabel = new Label();
-//		/* Style */
-//		titleLabel.addStyleName("calibriFont");
-//		titleLabel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-//		/* text */
-//		titleLabel.setText(title);
-//		/**********************************************************************************/
-//		
-//		/*********** Text Area ************************************************************/
-//		TextArea message = new TextArea();
-//		message.setCharacterWidth(50);
-//		message.setVisibleLines(4);
-//		/**********************************************************************************/
-//		
-//		/*********** Send Button **********************************************************/
-//		Button send = new Button();
-//		/* Style */
-//		send.setStyleName("singleButton");
-//		/* Text */
-//		send.setText(I18n.getI18nConstants().send());
-//		/**********************************************************************************/
-//		
-//		/********** Fill Main Panel *******************************************************/
-//		panel.add(titleLabel);
-//		panel.add(message);
-//		panel.add(send);
-//		/**********************************************************************************/
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
 		
 	    /*********** Create a table to layout the form options ****************************/
 	    layout = new FlexTable();
 	    layout.setCellSpacing(5);
 	    //layout.setBorderWidth(2);
 	    FlexCellFormatter cellFormatter = layout.getFlexCellFormatter();
-	    
-//	    /* Add a title to the form */
-//	    layout.setHTML(0, 0, I18n.getI18nMessages().fastMessage()+":");
-//	    cellFormatter.setColSpan(0, 0, 2);
-//	    cellFormatter.setRowSpan(0, 0, 3);
-//	    cellFormatter.setHorizontalAlignment(0, 0, HasHorizontalAlignment.ALIGN_CENTER);
-	    
+	    	    
 	    
 	    /* Add fields to display */
 	    layout.setHTML(0,0, I18n.getI18nConstants().title()+":");
@@ -169,11 +116,7 @@ public class FastMessage extends AbstractPage implements Observer {
 	    
 	    /* Add an error message to the form */		
 	    layout.setHTML(0, 2, "");
-	    //cellFormatter.setColSpan(4, 0, 3);
-	    //cellFormatter.setHorizontalAlignment(0, 3, HasHorizontalAlignment.ALIGN_LEFT);
 	    layout.setHTML(1, 2, "");
-	    //cellFormatter.setColSpan(4, 0, 3);
-	    //cellFormatter.setHorizontalAlignment(1, 2, HasHorizontalAlignment.ALIGN_LEFT);
 	    
 
 	    /* Add a panel button to the form */
@@ -183,29 +126,13 @@ public class FastMessage extends AbstractPage implements Observer {
 	    /* Add a button 'Reset' to the form */
 	    reset = new Button(I18n.getI18nConstants().reset());
 	    reset.addClickHandler(controler.getResetClickHandler());
-	    //layout.setWidget(1, 3, reset);
-	    //cellFormatter.setColSpan(2, 0, 2);
-	    //layout.setWidget(2, 1, reset);
-	   //cellFormatter.setRowSpan(1, 0, 2);
-	    //cellFormatter.setHorizontalAlignment(2, 1, HasHorizontalAlignment.ALIGN_CENTER);
 	    /* Add a button 'Send' to the form */
 	    send = new Button(I18n.getI18nConstants().send());
-	    send.addClickHandler(controler.getSendClickHandler());
-	    //layout.setWidget(2, 2, send);
-	    //cellFormatter.setColSpan(2, 0, 2);
-	    //cellFormatter.setRowSpan(1, 2, 2);
-	    //cellFormatter.setHorizontalAlignment(2, 2, HasHorizontalAlignment.ALIGN_CENTER);
+	    send.addClickHandler(controler.getSendClickHandler());;
 	    panelButton.add(reset);
 	    panelButton.add(send);
 	    layout.setWidget(2, 1, panelButton);
 	    cellFormatter.setHorizontalAlignment(2, 1, HasHorizontalAlignment.ALIGN_RIGHT);
-
-	    
-	    /* Add a waiting message to the form */
-//		waiting = new WaitingTransfer();
-//	    layout.setWidget(3, 0, waiting);
-//	    cellFormatter.setColSpan(3, 0, 3);
-//	    cellFormatter.setHorizontalAlignment(3, 0, HasHorizontalAlignment.ALIGN_CENTER);
 
 
 	    /* style */

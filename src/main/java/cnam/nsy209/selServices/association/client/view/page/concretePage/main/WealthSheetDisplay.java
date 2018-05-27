@@ -63,8 +63,8 @@ public class WealthSheetDisplay extends AbstractPage implements Observer {
 		/**********************************************************************************/
 		
 		/*********** Data Grid WealthSheet ************************************************/
-		wealthSheet = ((MemberLocalDto) dto).getWealthSheet();//WealthSheetCellTable.wealthSheet();
-		String name = ((MemberLocalDto) dto).getFullName();//"name"+(int) Math.random()*200;
+		wealthSheet = ((MemberLocalDto) dto).getWealthSheet();
+		String name = ((MemberLocalDto) dto).getFullName();
 		wealthSheetTable = new WealthSheetCellTable(width,height,I18n.getI18nMessages().noTransaction(),
 				wealthSheet,name);
 		/**********************************************************************************/

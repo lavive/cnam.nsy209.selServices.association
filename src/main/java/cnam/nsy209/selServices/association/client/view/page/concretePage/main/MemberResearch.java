@@ -38,7 +38,6 @@ public class MemberResearch extends AbstractPage implements Observer {
 	/* attributes */
 	private FlexTable layout;
 	private Label noResult;
-//	private WaitingTransfer waiting;
 	private Button validate;
 	private Button reset;
 	private MemberResearchControler controler;
@@ -118,15 +117,9 @@ public class MemberResearch extends AbstractPage implements Observer {
 		}else if(memberResearchModel.isWaiting()) {
 			validate.setEnabled(false);
 			reset.setEnabled(false);
-//			layout.setWidget(8, 0, waiting);
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
 			this.validate.setEnabled(true);
 			this.reset.setEnabled(true);	
-//			layout.setWidget(8, 0, waiting);
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();	
 		}
 	}
 
@@ -170,14 +163,6 @@ public class MemberResearch extends AbstractPage implements Observer {
 	    MultiWordSuggestOracle suggestPostalCodeOracle = new MultiWordSuggestOracle();
 	    MultiWordSuggestOracle suggestTownOracle = new MultiWordSuggestOracle();
 	    MultiWordSuggestOracle suggestCellNumber = new MultiWordSuggestOracle();
-//	    for(MemberDto member:this.controler.getModel().getMembersForList()) {
-//	    	suggestNameOracle.add(member.getName());
-//	    	suggestFornameOracle.add(member.getForname());
-//	    	suggestAddressOracle.add(member.getAddress());
-//	    	suggestPostalCodeOracle.add(member.getPostalCode());
-//	    	suggestTownOracle.add(member.getTown());
-//	    	suggestCellNumber.add(member.getCellNumber());
-//	    }
 	    layout.setHTML(1, 0, I18n.getI18nConstants().name()+":");	    
 	    SuggestBox name = new SuggestBox(suggestNameOracle);
 	    layout.setWidget(1, 1,name);
@@ -228,11 +213,6 @@ public class MemberResearch extends AbstractPage implements Observer {
 	    
 	    /* Add a Label to display no result */
 	    noResult = new Label();
-	    //noResult.setText(I18n.getI18nMessages().noMemberResult());
-//	    layout.setWidget(8, 0, noResult);
-//	    waiting = new WaitingTransfer();
-//	    cellFormatter.setColSpan(8, 0, 2);
-//	    cellFormatter.setHorizontalAlignment(8, 0, HasHorizontalAlignment.ALIGN_CENTER);
 	    
 	    /* style */
 	    cellFormatter.setStyleName(0, 0, "titleFontFlexTable");
@@ -256,7 +236,6 @@ public class MemberResearch extends AbstractPage implements Observer {
 		/***************** Fill the main panel ********************************************/	    
 	    /* Wrap the contents in a DecoratorPanel */
 	    DecoratorPanel decPanel = new DecoratorPanel();
-	    //decPanel.setWidth(width*0.5+"px");
 	    decPanel.setWidget(layout);
 	    
 	    panel.add(decPanel);

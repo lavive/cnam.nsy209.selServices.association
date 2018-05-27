@@ -30,7 +30,7 @@ public class MembersDisplay extends AbstractPage implements Observer {
 	}
 
 	/* Attribute */
-	private List<MemberLocalDto> members;// = new ArrayList<MemberDto>();
+	private List<MemberLocalDto> members;
 	private MembersCellTable membersTable;
 	
 	/* Constructor */
@@ -66,7 +66,7 @@ public class MembersDisplay extends AbstractPage implements Observer {
 		/**********************************************************************************/
 		
 		/*********** Data Grid Member *****************************************************/
-		members = new ArrayList<MemberLocalDto>();//MembersCellTable.members();
+		members = new ArrayList<MemberLocalDto>();
 		membersTable = new MembersCellTable(width,height,I18n.getI18nMessages().noMember(),members,
 											true,null);
 		/**********************************************************************************/

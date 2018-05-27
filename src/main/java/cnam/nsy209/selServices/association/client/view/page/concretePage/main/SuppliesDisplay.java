@@ -66,7 +66,7 @@ public class SuppliesDisplay extends AbstractPage implements Observer {
 		/**********************************************************************************/
 		
 		/*********** Data Grid Supply Demand **********************************************/
-		supplies = new ArrayList<SupplyDemandLocalDto>();//DemandsCellTable.suppliesDemands();
+		supplies = new ArrayList<SupplyDemandLocalDto>();
 		suppliesTable = new SuppliesCellTable(width,height,
 												I18n.getI18nMessages().noSupply(),supplies);
 		/**********************************************************************************/
