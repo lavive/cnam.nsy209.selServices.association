@@ -2,6 +2,15 @@ package cnam.nsy209.selServices.association.client.resources;
 
 import com.google.gwt.core.client.GWT;
 
+
+/** 
+ * 
+ * Class to manage ressources
+ * 
+ * @author lavive
+ *
+ */
+
 public class Res {
 
 	/* get resources */
