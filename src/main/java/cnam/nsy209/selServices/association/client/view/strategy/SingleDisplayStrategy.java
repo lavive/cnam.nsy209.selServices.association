@@ -22,11 +22,6 @@ public class SingleDisplayStrategy implements IDisplayStrategy {
 		return this.panel;
 	}
 
-//	@Override
-//	public void setPanel(Widget panel) {
-//		this.panel = panel;
-//	}
-
 	@Override
 	public void addPanel(Widget panel) {
 

@@ -12,8 +12,6 @@ public interface IDisplayStrategy {
 	
 	public Widget display();
 	
-//	public void setPanel(Widget panel);
-	
 	public void addPanel(Widget panel);
 
 }
