@@ -257,7 +257,7 @@ public class MemberResearchModel extends Observable implements WaitingModel {
 
 	public void setMembersForList() {
 		MemberAsyncCallback memberCallback = new MemberAsyncCallback();
-		/*this.membersForList = */memberCallback.getMembersForListBox();
+		memberCallback.getMembersForListBox();
 	}
 
 	public void setMembersForList(List<MemberLocalDto> members) {

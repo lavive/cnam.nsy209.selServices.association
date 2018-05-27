@@ -37,17 +37,7 @@ public class IdHomeModel extends Observable implements WaitingModel {
 	private boolean waiting;
 	private boolean authenticationError;
 	private boolean networkError;
-	
-//	/* initialize page values */
-//	public void onDisplay() {
-//		this.login="";
-//		this.associationIDError = null;
-//		this.associationPasswordError = null;
-//		this.waiting = false;
-//		
-//		setChanged();
-//		notifyObservers();
-//	}
+
 	
 	/* initialize page values */
 	public void onInitialize(String login,String password) {
@@ -109,7 +99,7 @@ public class IdHomeModel extends Observable implements WaitingModel {
 		this.authenticationError = true;
 		this.networkError = false;
 		
-		//setChanged();
+		
 		notifyObservers();
 	}
 	
@@ -123,7 +113,7 @@ public class IdHomeModel extends Observable implements WaitingModel {
 		this.authenticationError = false;
 		this.networkError = true;
 		
-		//setChanged();
+		
 		notifyObservers();
 	}
 	
