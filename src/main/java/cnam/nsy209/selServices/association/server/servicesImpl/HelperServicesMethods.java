@@ -52,24 +52,6 @@ public class HelperServicesMethods {
 	
 	public static String checkTransactionWellFormed(TransactionDto transaction) {
 		String originError = "";
-//		/* check if member origin of supply demand is well a debtor or a creditor */
-//		if(!transaction.getCreditorMember().equals(transaction.getSupplyDemand().getMember())) {
-//			if(!transaction.getDebtorMember().equals(transaction.getSupplyDemand().getMember()))
-//				originError = I18n.getI18nMessages().memberCreditorDebtor();
-//		}
-//		/* check if creditor and debtor are well different */
-//		if(!transaction.getDebtorMember().equals(transaction.getCreditorMember()))
-//			originError = I18n.getI18nMessages().differentCreditorDebtor();
-//		/* check if member origin is creditor, supplyDemand has to be a supply */
-//		if(transaction.getCreditorMember().equals(transaction.getSupplyDemand().getMember())) {
-//			if(transaction.getSupplyDemand().getType().equals(EnumSupplyDemandDto.DEMAND))
-//				originError = I18n.getI18nMessages().creditorSupply();
-//		} 
-//		/* check if member origin is debtor, supplyDemand has to be a demand */
-//		if(transaction.getDebtorMember().equals(transaction.getSupplyDemand().getMember())) {
-//			if(transaction.getSupplyDemand().getType().equals(EnumSupplyDemandDto.SUPPLY))
-//				originError = I18n.getI18nMessages().debtorDemand();
-//		}
 		
 		return originError;
 	}

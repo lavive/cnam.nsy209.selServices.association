@@ -18,7 +18,14 @@ import cnam.nsy209.selServices.association.shared.exception.EmptyException;
 import cnam.nsy209.selServices.association.shared.localDto.CategoryLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.transform.LocalToRemote;
 import cnam.nsy209.selServices.association.shared.localDto.transform.RemoteToLocal;
-
+/** 
+ * 
+ * Class Implementing async services declared at the client package
+ * Execute the category Service call
+ * 
+ * @author lavive
+ *
+ */
 @SuppressWarnings("serial")
 public class CategoriesServiceImpl extends RemoteServiceServlet implements CategoriesService {
 
@@ -48,17 +55,11 @@ public class CategoriesServiceImpl extends RemoteServiceServlet implements Categ
 		}
 		
 		return categoriesLocal;
-		
-//		for(CategoryDto cat:CategoryTable.getCategories()) {
-//			if(cat.getName().equals(category.getName())) throw new AlReadyExistException(cat.getName());
-//		}
-//		CategoryTable.add(category);
 	}
 
 	@Override
 	public List<CategoryLocalDto> getCategories() {
 		
-//		return CategoryTable.getCategories();
 		CategoriesDto categories = null;
 		try {
 			categories = new WebServiceCallable<CategoriesDto>(new GetCategoriesCallable()).call();
@@ -85,14 +86,7 @@ public class CategoriesServiceImpl extends RemoteServiceServlet implements Categ
 			if(cat.getName().equals(category.getName())) exist = true;
 		}
 		if(!exist) throw new DoNotExistException();
-//		for(CategoryDto cat:CategoryTable.getCategories()) {
-//			if(cat.getName().equals(category.getName())) exist = true;
-//		}
-//		if(!exist) throw new DoNotExistException();
-//		
-//		CategoryTable.delete(category);
-//		
-//		return CategoryTable.getCategories();
+
 		CategoriesDto newCategories = null;
 		try {
 			CategoryDto categoryRemote = LocalToRemote.toRemoteCategory(category);

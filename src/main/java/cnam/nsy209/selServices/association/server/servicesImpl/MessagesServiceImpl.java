@@ -17,7 +17,14 @@ import cnam.nsy209.selServices.association.shared.exception.EmptyException;
 import cnam.nsy209.selServices.association.shared.localDto.MessageLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.transform.LocalToRemote;
 import cnam.nsy209.selServices.association.shared.localDto.transform.RemoteToLocal;
-
+/** 
+ * 
+ * Class Implementing async services declared at the client package
+ * Execute the Message Service call
+ * 
+ * @author lavive
+ *
+ */
 @SuppressWarnings("serial")
 public class MessagesServiceImpl extends RemoteServiceServlet implements MessagesService {
 
@@ -42,7 +49,6 @@ public class MessagesServiceImpl extends RemoteServiceServlet implements Message
 		}
 		return messagesLocal;
 	
-//		MessageTable.add(message);
 	}
 
 	@Override
@@ -62,7 +68,6 @@ public class MessagesServiceImpl extends RemoteServiceServlet implements Message
 		}
 		return messagesLocal;
 				
-//		return MessageTable.getMessages();
 	}
 
 	@Override
@@ -88,8 +93,6 @@ public class MessagesServiceImpl extends RemoteServiceServlet implements Message
 		}
 		return messagesLocal;
 		
-		
-//		return MessageTable.delete(message);
 	}
 
 }

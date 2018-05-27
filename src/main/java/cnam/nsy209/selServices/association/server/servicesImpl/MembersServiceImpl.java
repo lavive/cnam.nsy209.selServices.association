@@ -23,7 +23,14 @@ import cnam.nsy209.selServices.association.shared.exception.EmptyMemberListExcep
 import cnam.nsy209.selServices.association.shared.localDto.MemberLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.transform.LocalToRemote;
 import cnam.nsy209.selServices.association.shared.localDto.transform.RemoteToLocal;
-
+/** 
+ * 
+ * Class Implementing async services declared at the client package
+ * Execute the Member Service call
+ * 
+ * @author lavive
+ *
+ */
 @SuppressWarnings("serial")
 public class MembersServiceImpl extends RemoteServiceServlet implements MembersService {
 
@@ -63,7 +70,6 @@ public class MembersServiceImpl extends RemoteServiceServlet implements MembersS
 		}
 		
 		return membersLocal;
-//		return MemberTable.getLastMembers(numberToDisplay);
 	}
 
 	@Override
@@ -77,18 +83,6 @@ public class MembersServiceImpl extends RemoteServiceServlet implements MembersS
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		if (HelperServicesMethods.getMembers(memberRemote,members.getMembers()).isEmpty())
-//			throw new EmptyMemberListException();
-//		else {
-//			List<MemberDto> membersRemote =
-//						HelperServicesMethods.getMembers(memberRemote,members.getMembers());
-//			List<MemberLocalDto> membersLocal = new ArrayList<MemberLocalDto>();
-//			for(MemberDto memb:membersRemote) {
-//				membersLocal.add(RemoteToLocal.toLocalMember(memb));
-//			}
-//			
-//			return membersLocal;
-//		}
 		List<MemberLocalDto> result = new ArrayList<MemberLocalDto>();
 		for(MemberDto memb:members.getMembers()) {
 			result.add(RemoteToLocal.toLocalMember(memb));
@@ -96,28 +90,13 @@ public class MembersServiceImpl extends RemoteServiceServlet implements MembersS
 		return result;
 	}
 
-//	@Override
-//	public List<MemberDto> delete(MemberDto member,List<MemberDto> members) throws DoNotExistException {
-//		if(noExistMember(member,members)) throw new DoNotExistException();
-//		return MemberTable.delete(member,members);
-//	}
 
 	@Override
 	public List<MemberLocalDto> create(MemberLocalDto member) throws AlReadyExistException,EmptyException {
 		MemberDto memberRemote = LocalToRemote.toRemoteMember(member);
-//		DialogBox test = new DialogBox();
-//		test.setText("3id: "+memberRemote.getId()+ ": "+memberRemote);
-//		test.show();
 		
 		if(HelperServicesMethods.emptyMember(memberRemote)) 
 			throw new EmptyException();
-		
-//		List<MemberDto> membersRemote = new ArrayList<MemberDto>();
-//		for(MemberLocalDto memb:getMembers()) {
-//			membersRemote.add(LocalToRemote.toRemoteMember(memb));
-//		}
-//		if(HelperServicesMethods.existMember(memberRemote,membersRemote)) 
-//			throw new AlReadyExistException(member.getFullName());
  	   	 
 
 		
@@ -138,9 +117,6 @@ public class MembersServiceImpl extends RemoteServiceServlet implements MembersS
 		return membersLocal;
 		
 		
-		
-		
-//		MemberTable.create(member);
 	}
 
 	@Override
@@ -155,24 +131,15 @@ public class MembersServiceImpl extends RemoteServiceServlet implements MembersS
 
 		MemberDto newMember = null;
 		try {
-//			System.out.println("2id: "+memberRemote.getId()+ ": "+memberRemote);
-//			DialogBox test = new DialogBox();
-//			test.setText("2id: "+memberRemote.getId()+ ": "+memberRemote);
-//			test.show();
+
 			newMember = new WebServiceCallable<MemberDto>(new UpdateMemberCallable(memberRemote)).call();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		try {
-//			new WebServiceCallable<MemberDto>(new GetMemberCallable(member.getId())).call();
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+
 		
 		return RemoteToLocal.toLocalMember(newMember);
-//		return MemberTable.update(member);
 	}
 	
 	@Override
@@ -200,36 +167,27 @@ public class MembersServiceImpl extends RemoteServiceServlet implements MembersS
 		
 		return membersLocal;
 		
-		//return MemberTable.delete(member);
 	}
 
 	@Override
 	public List<MemberLocalDto> delete(MemberLocalDto member, MemberLocalDto attributes) throws DoNotExistException {
 		delete(member);
-		//MembersDto members = new MembersDto();
 		List<MemberLocalDto> membersLocal = null;
 		
 		try {
 			membersLocal = getMembers(attributes);
-			//members.setMembers(getMembers(attributes));
 		} catch (EmptyMemberListException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return membersLocal;//members.getMembers();
-//		if(HelperServicesMethods.noExistMember(member,MemberTable.getMembers())) throw new DoNotExistException();
-//		return MemberTable.delete(member,attributes);
+		return membersLocal;
 	}
 
 	@Override
 	public List<MemberLocalDto> deleteLastMember(MemberLocalDto member, int numberToDisplay) throws DoNotExistException {
 		delete(member);
-//		MembersDto members = new MembersDto();
-//		members.setMembers(getLastMembers(numberToDisplay));
 		List<MemberLocalDto> membersLocal = getLastMembers(numberToDisplay);
-		return membersLocal;//members.getMembers();
-//		if(HelperServicesMethods.noExistMember(member,MemberTable.getMembers())) throw new DoNotExistException();
-//		return MemberTable.deleteLastMember(member,numberToDisplay);
+		return membersLocal;
 	}
 
 	@Override

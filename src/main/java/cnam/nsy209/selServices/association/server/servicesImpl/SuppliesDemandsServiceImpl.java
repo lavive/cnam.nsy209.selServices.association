@@ -16,7 +16,14 @@ import cnam.nsy209.selServices.association.shared.exception.DoNotExistException;
 import cnam.nsy209.selServices.association.shared.localDto.SupplyDemandLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.transform.LocalToRemote;
 import cnam.nsy209.selServices.association.shared.localDto.transform.RemoteToLocal;
-
+/** 
+ * 
+ * Class Implementing async services declared at the client package
+ * Execute the SupplyDemand Service call
+ * 
+ * @author lavive
+ *
+ */
 @SuppressWarnings("serial")
 public class SuppliesDemandsServiceImpl extends RemoteServiceServlet implements SuppliesDemandsService {
 
@@ -38,7 +45,6 @@ public class SuppliesDemandsServiceImpl extends RemoteServiceServlet implements 
 		}
 		return suppliesDemandsLocal;
 				
-//		return SupplyDemandTable.getSuppliesDemands(type);
 	}
 
 	@Override
@@ -65,7 +71,6 @@ public class SuppliesDemandsServiceImpl extends RemoteServiceServlet implements 
 			suppliesDemandsLocal.add(RemoteToLocal.toLocalSupplyDemand(supp));
 		}
 		return suppliesDemandsLocal;
-//		return SupplyDemandTable.delete(supplyDemand);
 	}
 
 	@Override

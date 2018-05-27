@@ -23,7 +23,14 @@ import cnam.nsy209.selServices.association.shared.localDto.TransactionLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.WealthSheetLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.transform.LocalToRemote;
 import cnam.nsy209.selServices.association.shared.localDto.transform.RemoteToLocal;
-
+/** 
+ * 
+ * Class Implementing async services declared at the client package
+ * Execute the Association Service call
+ * 
+ * @author lavive
+ *
+ */
 @SuppressWarnings("serial")
 public class TransactionsServiceImpl extends RemoteServiceServlet implements TransactionsService {
 
@@ -58,8 +65,7 @@ public class TransactionsServiceImpl extends RemoteServiceServlet implements Tra
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return result;//RemoteToLocal.toLocalWealthSheet(wealthSheetDto);
-//		return MemberTable.getTransactions(member);
+		return result;
 	}
 
 	@Override
@@ -73,7 +79,6 @@ public class TransactionsServiceImpl extends RemoteServiceServlet implements Tra
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		MemberTable.add(transaction);
 	}
 
 	@Override
