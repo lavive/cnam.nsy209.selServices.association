@@ -21,7 +21,13 @@ import cnam.nsy209.selServices.association.shared.localDto.PersonLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.SupplyDemandLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.TransactionLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.WealthSheetLocalDto;
-
+/** 
+ * 
+ * Class to transform Local to Remote DTO
+ * 
+ * @author lavive
+ *
+ */
 public class LocalToRemote {
 	
 	public static AssociationDto toRemoteAssociation(AssociationLocalDto associationLocal) {
