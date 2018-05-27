@@ -8,7 +8,13 @@ import cnam.nsy209.selServices.association.server.webService.RetrofitBuilder;
 import cnam.nsy209.selServices.association.server.webService.WebService;
 import retrofit2.Call;
 import retrofit2.Response;
-
+/** 
+ * 
+ * Class wrapping REST Service call and get his result
+ * 
+ * @author lavive
+ *
+ */
 public class GetAssociationNameCallable  implements Callable<String> {
 
 

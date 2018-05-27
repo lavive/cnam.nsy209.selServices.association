@@ -6,7 +6,13 @@ import java.util.concurrent.Callable;
 import cnam.nsy209.selServices.association.server.webService.IWebService;
 import retrofit2.Call;
 import retrofit2.Response;
-
+/** 
+ * 
+ * Class wrapping REST Service call and get his result
+ * 
+ * @author lavive
+ *
+ */
 public class WebServiceCallable<T>  implements Callable<T> {
 	
 	private IWebService<T> webServiceCallable;

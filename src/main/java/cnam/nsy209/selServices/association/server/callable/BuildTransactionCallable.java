@@ -4,18 +4,18 @@ import cnam.nsy209.selServices.association.server.dto.TransactionDto;
 import cnam.nsy209.selServices.association.server.webService.IWebService;
 import cnam.nsy209.selServices.association.server.webService.RetrofitBuilder;
 import retrofit2.Call;
-
+/** 
+ * 
+ * Class wrapping REST Service call and get his result
+ * 
+ * @author lavive
+ *
+ */
 public class BuildTransactionCallable  implements IWebService<TransactionDto> {
-	
-//	private long creditorId;
-//	private long debtorId;
-//	private long supplyDemandId;
+
 	private TransactionDto transaction;
 	
 	public BuildTransactionCallable(TransactionDto transaction) {
-//		this.creditorId = creditorId;
-//		this.debtorId = debtorId;
-//		this.supplyDemandId = supplyDemandId;
 		this.transaction = transaction;
 	}
 
