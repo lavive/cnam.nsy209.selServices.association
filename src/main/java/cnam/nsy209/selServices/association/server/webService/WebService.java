@@ -19,7 +19,13 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
-
+/** 
+ * 
+ * Interface which launch the call to the REST Services 
+ * 
+ * @author lavive
+ *
+ */
 public interface WebService {
 
 	/* check first connection */
@@ -68,10 +74,7 @@ public interface WebService {
 
     @POST("transaction")
     Call<Void> addTransaction(@Body TransactionDto transactionDto);
-
     
-    
-    /* to implement back end side */
     @GET("association/authentication/{login}/{password}/{number}")
     Call<MembersDto> checkIds(@Path("login") String login, @Path("password") String password,@Path("number") int number);
     
@@ -92,10 +95,7 @@ public interface WebService {
     
     @DELETE("member/delete/{id}")
     Call<MembersDto>  deleteMember(@Path("id") long id);
-    
-	//public List<MemberDto> delete(MemberDto member, MemberDto attributes) throws DoNotExistException;
-	//public List<MemberDto> deleteLastMember(MemberDto member,int numberToDisplay) throws DoNotExistException;
-    
+ 
     @POST("member/post")
     Call<Void> create(@Body MemberDto member);
     
@@ -123,12 +123,7 @@ public interface WebService {
     @GET("supplyDemand/get/{id}")
     Call<SupplyDemandDto> getSupplyDemand(@Path("id") long id);
     
-//    @POST("transaction/{creditorId}/{debtorId}/{supplyDemandId}")
-//    Call<TransactionDto> buildTransaction(@Path("creditorId") long creditorId,
-//    		                              @Path("debtorId") long debtorId,
-//    		                              @Path("supplyDemandId") long supplyDemandId);
-
-    
+   
     @POST("transaction/post/get")
     Call<TransactionDto> buildTransaction(@Body TransactionDto transaction);
 }
