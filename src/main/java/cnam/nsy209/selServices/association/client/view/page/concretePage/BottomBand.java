@@ -73,12 +73,5 @@ public class BottomBand extends AbstractPage implements Observer {
 		
 		return panel;
 	}
-	
-//	/* for the test */
-//	private String getAssociationDatas() {
-//		return "Sel de Save - 25 Chemin du pont du Diable - 31330 GRENADE/GNE - "+
-//				"seldeSave@gmail.com - Port:0620304050 - Fixe:0520304050 - www.seldeSave.Fr";
-//				
-//	}
 
 }

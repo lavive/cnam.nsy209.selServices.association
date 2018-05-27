@@ -52,7 +52,6 @@ public final class IdHome extends AbstractPage implements Observer {
 	private Label loginError;
 	private Label passwordError;
 	private Label authenticationError;
-//	private WaitingTransfer waiting;
 	private Button validate;
 	
 	/* constructors */
@@ -94,14 +93,10 @@ public final class IdHome extends AbstractPage implements Observer {
 			this.validate.setEnabled(false);
 			this.loginInput.setEnabled(false);
 			this.passwordInput.setEnabled(false);
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
 			this.validate.setEnabled(true);
 			this.loginInput.setEnabled(true);
-			this.passwordInput.setEnabled(true);
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();			
+			this.passwordInput.setEnabled(true);		
 		}
 		/* label error */
 		if(idHomeModel.isNetworkError()) {
@@ -135,8 +130,6 @@ public final class IdHome extends AbstractPage implements Observer {
 		loginError = new Label();
 		passwordError = new Label();
 		authenticationError = new Label();
-//		waiting = new WaitingTransfer();
-//		waiting.getPanel().setHeight(0.05*height+"px");
 		validate = new Button();
 		/************ get Handler to Controler ********************************************/
 		controler = new IdHomeControler(width,height);
@@ -148,8 +141,7 @@ public final class IdHome extends AbstractPage implements Observer {
 		/*********** Main panel ***********************************************************/
 		VerticalPanel panel = new VerticalPanel();
 		/* Style */
-		panel.setWidth(0.98*width+"px");//100%");
-		//panel.setHeight(0.95*height+"px");
+		panel.setWidth(0.98*width+"px");
 		panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		/**********************************************************************************/
 		
@@ -268,11 +260,7 @@ public final class IdHome extends AbstractPage implements Observer {
 		
 		authenticationErrorPanel.add(authenticationError);
 		/************************************************************************************/
-		
-		/******************* progress *******************************************************/
-		//waiting
-		/************************************************************************************/
-		
+				
 		/******************* bottom panel ***************************************************/
 		HorizontalPanel bottomPanel = new HorizontalPanel();
 		/* style */
@@ -291,7 +279,6 @@ public final class IdHome extends AbstractPage implements Observer {
 		panel.add(topPanel);
 		panel.add(authenticationPanel);
 		panel.add(authenticationErrorPanel);
-//		panel.add(waiting);
 		panel.add(bottomPanel);
 		/************************************************************************************/
 		

@@ -31,7 +31,6 @@ public class Menu extends AbstractPage implements Observer {
 	
 	/* Attribute */
 	private MenuControler controler;
-//	private WaitingTransfer waiting;
 
 	/* Constructor */
 	private Menu(int width,int height) {
@@ -42,7 +41,6 @@ public class Menu extends AbstractPage implements Observer {
 	public void update(Observable observable, Object object) {
 		MenuModel menuModel = (MenuModel) observable;
 		/* active and desactive buttons */
-		//buttons = menuModel.getActiveButtons();
 		for(Button button:menuModel.getActiveButtons().keySet()) {
 			if(menuModel.getActiveButtons().get(button)) {
 				controler.setActivedButton(button);
@@ -56,14 +54,10 @@ public class Menu extends AbstractPage implements Observer {
 			for(Button button:menuModel.getActiveButtons().keySet()) {
 				button.setEnabled(false);
 			}
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
 			for(Button button:menuModel.getActiveButtons().keySet()) {
 				if(button != controler.getActivedButton()) button.setEnabled(true);
-			}
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();			
+			}		
 		}
 	}
 
@@ -115,10 +109,6 @@ public class Menu extends AbstractPage implements Observer {
 		catalog.setWidth(buttonWidth+"px");
 		particulars.setWidth(buttonWidth+"px");	
 		/**********************************************************************************/	
-		
-		/*********** Waiting message ******************************************************/
-//		waiting = new WaitingTransfer();
-		/**********************************************************************************/	
 
 		/*********** Controler ************************************************************/
 		List<Button> buttonsToActive = new ArrayList<Button>();
@@ -130,12 +120,6 @@ public class Menu extends AbstractPage implements Observer {
 		buttonsToActive.add(messages);
 		buttonsToActive.add(catalog);
 		buttonsToActive.add(particulars);	
-//		
-//		buttons.put(home, false);
-//		buttons.put(members, false);
-//		buttons.put(suppliesDemands, false);
-//		buttons.put(catalog, false);
-//		buttons.put(particulars, false);
 		
 		controler = new MenuControler(width,height,buttonsToActive);
 		controler.getModel().addObserver(this);
@@ -164,7 +148,6 @@ public class Menu extends AbstractPage implements Observer {
 		panelInter.add(particulars);
 		
 		panel.add(panelInter);
-//		panel.add(waiting);
 		/**********************************************************************************/
 		
 		return panel;
