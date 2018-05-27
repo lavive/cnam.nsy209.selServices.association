@@ -17,14 +17,10 @@ public abstract class AbstractPage extends Composite implements IPage {
 	/* Static attributes */
 	protected static final int WIDTH = Window.getClientWidth();
 	protected static final int HEIGHT = Window.getClientHeight();
-	//public static final Logo logo = new Logo((int)(0.2*WIDTH), (int)(0.25*HEIGHT));
-	//protected static final Menu menu = new Menu((int)(0.2*WIDTH), (int)(0.65*HEIGHT));
-	//protected static final BottomBand bottomBand = new BottomBand((int)(0.98*width), (int)(0.65*height));
 	
 	/* Attributes */
 	
 	private IDisplayStrategy displayStrategy;
-	//private AbstractPage parentPage;
 	
 	/* Constructors */
 	
