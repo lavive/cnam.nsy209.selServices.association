@@ -40,7 +40,7 @@ public class FieldValidators {
 	}
 	
 	/* retrieve field checks */
-	public /*static*/ Validators getValidators(EnumField field) {
+	public Validators getValidators(EnumField field) {
 		Validators validators = new Validators();
 		for(EnumCheck check:getChecks(field)) {
 			validators.addValidator(CheckValidator.getValidator(check));
@@ -49,9 +49,9 @@ public class FieldValidators {
 	}
 	
 	/* helper methods */
-	private /*static*/ HashMap<EnumField,List<EnumCheck>> fieldCheck = new HashMap<EnumField,List<EnumCheck>>();
+	private  HashMap<EnumField,List<EnumCheck>> fieldCheck = new HashMap<EnumField,List<EnumCheck>>();
 	
-	private /*static*/ List<EnumCheck> getChecks(EnumField field){
+	private  List<EnumCheck> getChecks(EnumField field){
 		return fieldCheck.get(field);
 	}
 	
@@ -62,7 +62,7 @@ public class FieldValidators {
 		public static void putValidator(EnumCheck check,IValidator validator) { checkValidator.put(check, validator); }
 	}
 	
-	/*static*/private void build() {
+	private void build() {
 		/* EnumField.ASSOCIATION_ID */
 		List<EnumCheck> assosID = new ArrayList<EnumCheck>();
 		assosID.add(EnumCheck.EMPTY);
