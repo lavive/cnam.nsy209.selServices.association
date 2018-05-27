@@ -80,16 +80,6 @@ public class MemberDto extends PersonDto{
 	
 	/* helper method */
 	
-//	public static MemberDto getByFullName(long idToFind,List<MemberDto> members) {
-//		for(MemberDto member:members) {
-//			String[] name = member.getFullName().split("_");
-//			long id = Long.parseLong(name[name.length-1]);
-//			if(idToFind == id)
-//				return member;
-//		}
-//		return null;
-//	}
-	
 	public static long getIdByFullName(String fullName) {
 		String[] name = fullName.split("_");
 		return Long.parseLong(name[name.length-1]);
