@@ -52,7 +52,6 @@ public class DialogBoxWaiting extends DialogBox implements Observer{
 	    /**************** Create the main panel *******************************************************/
 	    VerticalPanel panel = new VerticalPanel();
 		panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-		//panel.setSpacing(20);
 		panel.setWidth("100%");
 	    /**********************************************************************************************/
 	    
@@ -70,7 +69,6 @@ public class DialogBoxWaiting extends DialogBox implements Observer{
 	    
 	    panel.add(upPanel);
 	    panel.add(midlePanel);
-//	    panel.add(this.waiting);
 	    setWidth(this.waiting.getWidth()+"px");
 	    setHeight(this.waiting.getHeight()+"px");
 	    setWidget(panel);
