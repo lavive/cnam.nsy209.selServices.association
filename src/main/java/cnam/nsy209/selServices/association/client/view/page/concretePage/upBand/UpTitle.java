@@ -98,12 +98,5 @@ public class UpTitle extends AbstractPage {
 		return panel;
 		
 	}
-//	
-//	/* nested enum to limit instance of MenuHorizontal */
-//	public static enum EnumMenuHorizontal{
-//		ASSOCIATION_DISPLAY,
-//		CATEGORIES_DISPLAY,
-//		MESSAGES_DISPLAY;
-//	}
 
 }

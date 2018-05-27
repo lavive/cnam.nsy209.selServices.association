@@ -48,12 +48,8 @@ public class MenuSupplies extends AbstractPage implements Observer {
 		/* supplies button and waiting message */
 		if(menuSuppliesModel.isWaiting()) {
 			button.setEnabled(false);
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
-			button.setEnabled(true);
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();			
+			button.setEnabled(true);		
 		}
 
 	}
@@ -105,20 +101,16 @@ public class MenuSupplies extends AbstractPage implements Observer {
 		/**********************************************************************************/
 
 		/*********** Buttons **************************************************************/
-//		Button back = new Button(I18n.getI18nConstants().back());
-//		back.setStyleName("buttonHorizontalMenu");
 		Button demands = new Button(I18n.getI18nConstants().demands());
 		demands.setStyleName("buttonHorizontalMenu");
 		
 		int buttonWidth = (int) (width*0.16);
-//		back.setWidth(buttonWidth+"px");
 		demands.setWidth(buttonWidth+"px");
 		this.button = demands;
 		/**********************************************************************************/
 		
 		/********** Fill Main Panel *******************************************************/
 		buttonPanelInter.add(demands);
-//		buttonPanelInter.add(back);
 		buttonPanel.add(buttonPanelInter);
 		
 		panel.add(titleLabel);

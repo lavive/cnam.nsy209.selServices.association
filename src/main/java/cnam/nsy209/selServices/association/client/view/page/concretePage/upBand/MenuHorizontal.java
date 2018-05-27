@@ -93,7 +93,6 @@ public class MenuHorizontal extends AbstractPage implements Observer {
 	/* Attribute */
 	private MenuHorizontalControler controler;	
 	private Button back;
-//	private WaitingTransfer waiting;
 
 	@Override
 	public void update(Observable observable, Object object) {
@@ -101,12 +100,8 @@ public class MenuHorizontal extends AbstractPage implements Observer {
 		/* validate button and waiting message */
 		if(menuHorizontalModel.isWaiting()) {
 			back.setEnabled(false);
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
-			back.setEnabled(true);
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();			
+			back.setEnabled(true);		
 		}
 	}
 
@@ -121,9 +116,7 @@ public class MenuHorizontal extends AbstractPage implements Observer {
 	/* private helper method */
 	/* to build the page panel */
 	private Widget buildPanel(int width,int height,String title) {
-		
-		//controler = new MenuHorizontalControler();
-		
+				
 		/*********** Main Panel ***********************************************************/
 		VerticalPanel panel = new VerticalPanel();
 		/* Style */
@@ -165,18 +158,11 @@ public class MenuHorizontal extends AbstractPage implements Observer {
 		
 		int buttonWidth = (int) (width*0.16);
 		back.setWidth(buttonWidth+"px");
-		//back.addClickHandler(controler.getBackClickHandler());
-		/**********************************************************************************/	
-
-		/*********** Waiting message ******************************************************/
-//		waiting = new WaitingTransfer();
-//		waiting.getPanel().setHeight(0.05*height+"px");
 		/**********************************************************************************/
 		
 		/********** Fill Main Panel *******************************************************/
 		buttonPanelInter.add(back);
 		buttonPanel.add(buttonPanelInter);
-//		buttonPanel.add(waiting);
 		
 		panel.add(titleLabel);
 		panel.add(buttonPanel);
@@ -192,20 +178,6 @@ public class MenuHorizontal extends AbstractPage implements Observer {
 		controler.getModel().onInitialise();
 		back.addClickHandler(controler.getBackClickHandler());
 	}
-	/* nested enum to limit instance of MenuHorizontal */
-//	public static enum EnumMenuHorizontal{
-//		ASSOCIATION_DISPLAY,
-//		ASSOCIATION_EDIT,
-//		CATEGORIES_DISPLAY,
-//		CATEGORY_EDIT,
-//		MEMBER_CARD,
-//		MEMBER_CREATE,
-//		MEMBER_EDIT,
-//		MEMBER_RESEARCH,
-//		MEMBER_RESEARCH_RESULT,
-//		MESSAGES_DISPLAY,
-//		TRANSACTION_EDIT,
-//		WEALTHSHEET_DISPLAY;
-//	}
+	
 
 }

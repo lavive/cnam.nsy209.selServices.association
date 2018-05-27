@@ -35,12 +35,10 @@ public class MenuDemands extends AbstractPage implements Observer {
 		this.controler.getModel().addObserver(this);
 		this.supplies.addClickHandler(controler.getSuppliesClickHandler());
 		this.controler.getModel().onInitialise();
-//		this.back.addClickHandler(controler.getBackClickHandler());
 	}
 
 	/* Attribute */
 	private MenuDemandsControler controler;
-//	private Button back;
 	private Button supplies;
 
 	@Override
@@ -50,12 +48,8 @@ public class MenuDemands extends AbstractPage implements Observer {
 		/* supplies button and waiting message */
 		if(menuDemandsModel.isWaiting()) {
 			supplies.setEnabled(false);
-//			if(!this.waiting.isRunning())
-//				this.waiting.start();
 		} else {
-			supplies.setEnabled(true);
-//			if(this.waiting.isRunning())
-//				this.waiting.stop();			
+			supplies.setEnabled(true);		
 		}
 
 	}
@@ -108,19 +102,15 @@ public class MenuDemands extends AbstractPage implements Observer {
 		/**********************************************************************************/
 
 		/*********** Buttons **************************************************************/
-//		back = new Button(I18n.getI18nConstants().back());
-//		back.setStyleName("buttonHorizontalMenu");
 		supplies = new Button(I18n.getI18nConstants().supplies());
 		supplies.setStyleName("buttonHorizontalMenu");
 
 		int buttonWidth = (int) (width*0.16);
-//		back.setWidth(buttonWidth+"px");
 		supplies.setWidth(buttonWidth+"px");
 		/**********************************************************************************/
 
 		/********** Fill Main Panel *******************************************************/
 		buttonPanelInter.add(supplies);
-//		buttonPanelInter.add(back);
 		buttonPanel.add(buttonPanelInter);
 		
 		panel.add(titleLabel);
