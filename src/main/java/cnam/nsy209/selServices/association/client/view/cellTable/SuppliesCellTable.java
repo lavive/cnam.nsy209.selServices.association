@@ -121,47 +121,7 @@ public class SuppliesCellTable extends CellTable<SupplyDemandLocalDto> {
 		return panel;
 	}
 	
-	/* test methods */
-//	public static List<SupplyDemandDto> suppliesDemands() {
-//		List<SupplyDemandDto> suppliesDemands = new ArrayList<SupplyDemandDto>();
-//		for(long l=1;l<201;l++) {
-//			SupplyDemandDto supplyDemand = new SupplyDemandDto();
-//			supplyDemand.setId(l);
-//			supplyDemand.setType(EnumSupplyDemandDto.SUPPLY);
-//			supplyDemand.setCategory("category"+l);
-//			supplyDemand.setTitle("suptttiiiiiiiiiiiiiiiiittttttllllllllllllllleee"+l);
-//			MemberDto member = new MemberDto();
-//			member.setForname("forname"+l);
-//			member.setName("name"+l);
-//			supplyDemand.setMember(member);
-//			
-//			suppliesDemands.add(supplyDemand);
-//		}
-//		return suppliesDemands;
-//	}
-//	private ActionCell<SupplyDemandDto> getDeleteAction(){
-//		return new ActionCell<SupplyDemandDto>(I18n.getI18nConstants().delete(), new ActionCell.Delegate<SupplyDemandDto>() {
-//			 @Override
-//			 public void execute(SupplyDemandDto supplyDemand) {
-//				 DialogBoxConfirm<SupplyDemandDto> dialogBox = new DialogBoxConfirm<SupplyDemandDto>(supplyDemand,
-//						 I18n.getI18nMessages().sure(),clickHandlerToTransmit());
-//				 dialogBox.center();
-//				 dialogBox.show();
-//			 }
-//		 });
-//
-//	}
-//	private IActionToTransmit<SupplyDemandDto> clickHandlerToTransmit() {
-//		return new IActionToTransmit<SupplyDemandDto>() {
-//			@Override
-//			public void action(SupplyDemandDto supplyDemand) {
-//				 dataProvider.getList().remove(supplyDemand);
-//				 dataProvider.refresh();
-//				
-//			}
-//      };
-//	}	
-
+	
 	/* getter */
 	public ListDataProvider<SupplyDemandLocalDto> getDataProvider() {
 		return dataProvider;

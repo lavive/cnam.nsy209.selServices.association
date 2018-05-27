@@ -23,15 +23,11 @@ public class WealthSheetCellTable extends CellTable<TransactionDisplayLocalDto> 
 	private VerticalPanel panel;
 	private ListDataProvider<TransactionDisplayLocalDto> dataProvider;
 	private WealthSheetDisplayControler controler;
-//	private MemberAsyncCallback memberCallback;
-//	private SupplyDemandAsyncCallback supplyDemandCallback;
 	
 	/* Constructor */
 	public WealthSheetCellTable(int width, int height, String emptyMessage,WealthSheetLocalDto wealthSheet,
 								String name) {	
 		super();
-//		memberCallback = new MemberAsyncCallback();
-//		supplyDemandCallback = new SupplyDemandAsyncCallback();
 		
 		controler = new WealthSheetDisplayControler(width,height);
 		
@@ -71,58 +67,7 @@ public class WealthSheetCellTable extends CellTable<TransactionDisplayLocalDto> 
 	    /* column width*/
 	    double columnWidth = width*0.1;
 	    
-//	    /*  Creditor */
-//	    TextColumn<TransactionLocalDto> creditorColumn =
-//	        new TextColumn<TransactionLocalDto>() {
-//	          @Override
-//	          public String getValue(TransactionLocalDto object) {
-//	        	  MemberLocalDto creditor = new MemberLocalDto();
-//	        	  MemberAsyncCallback memberCallback = new MemberAsyncCallback();
-//	        	  memberCallback.getMember(object.getCreditorMemberId(), creditor);
-//	              return creditor.getFullName();//object.getCreditorMember().getFullName();
-//	          }
-//	    };
-//	    addColumn(creditorColumn, I18n.getI18nConstants().creditor());
-//	    setColumnWidth(creditorColumn, 1.5*columnWidth, Unit.PX);
-//	    
-//	    /*  Debtor */
-//	    TextColumn<TransactionLocalDto> debtorColumn =
-//	        new TextColumn<TransactionLocalDto>() {
-//	          @Override
-//	          public String getValue(TransactionLocalDto object) {
-//	        	  MemberLocalDto debtor = new MemberLocalDto();
-//	        	  MemberAsyncCallback memberCallback = new MemberAsyncCallback();
-//	        	  memberCallback.getMember(object.getDebtorMemberId(), debtor);
-//	              return debtor.getFullName();//object.getDebtorMember().getFullName();
-//	          }
-//	    };
-//	    addColumn(debtorColumn, I18n.getI18nConstants().debtor());
-//	    setColumnWidth(debtorColumn, 1.5*columnWidth, Unit.PX);
-//
-//	    /* SupplyDemand */
-//	    TextColumn<TransactionLocalDto> supplyDemandColumn =
-//	        new TextColumn<TransactionLocalDto>() {
-//	          @Override
-//	          public String getValue(TransactionLocalDto object) {
-//	        	  SupplyDemandLocalDto supplyDemand = new SupplyDemandLocalDto();
-//	        	  SupplyDemandAsyncCallback supplyDemandCallback = new SupplyDemandAsyncCallback();
-//	        	  supplyDemandCallback.getSupplyDemand(object.getSupplyDemandId(), supplyDemand);
-//	              return supplyDemand.getTitle();//object.getSupplyDemand().getTitle();
-//	          }
-//	    };
-//	    addColumn(supplyDemandColumn, I18n.getI18nConstants().supplyDemand());
-//	    setColumnWidth(supplyDemandColumn, 5*columnWidth, Unit.PX);
-//
-//	    /* Amount */
-//	    TextColumn<TransactionLocalDto> amountColumn =
-//	        new TextColumn<TransactionLocalDto>() {
-//	          @Override
-//	          public String getValue(TransactionLocalDto object) {
-//	            return object.getAmount().toString();
-//	          }
-//	    };
-//	    addColumn(amountColumn, I18n.getI18nConstants().amount());
-//	    setColumnWidth(amountColumn, columnWidth, Unit.PX);
+
 	    /*  Creditor */
 	    TextColumn<TransactionDisplayLocalDto> creditorColumn =
 	        new TextColumn<TransactionDisplayLocalDto>() {
@@ -184,23 +129,10 @@ public class WealthSheetCellTable extends CellTable<TransactionDisplayLocalDto> 
 	    pager.setPageSize(10);
 	    /******************************************************************************/
 
-	    /****************** Panel for 'Add' Button************* ***********************/
-//	    HorizontalPanel buttonPanel = new HorizontalPanel();
-//	    buttonPanel.setWidth(width+"px");
-//	    buttonPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-//	    
-//	    Button add = new Button(I18n.getI18nConstants().add());
-//	    add.setStyleName("singleButton");
-//	    add.addClickHandler(controler.getAddClickHandler());
-//	    
-//	    buttonPanel.add(add);
-	    /******************************************************************************/
-	    
 	    /****************** Fill the main panel ***************************************/
 	    panel.add(hPanel);
 	    panel.add(this);
 	    panel.add(pager);
-//	    panel.add(buttonPanel);
 	    /******************************************************************************/
 	}
 	

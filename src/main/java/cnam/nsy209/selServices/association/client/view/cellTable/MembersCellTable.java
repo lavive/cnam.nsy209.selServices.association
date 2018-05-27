@@ -39,20 +39,7 @@ public class MembersCellTable extends CellTable<MemberLocalDto> {
 		panel.setWidth(width+"px");
 		panel.setHeight(height+"px");
 		panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-	    //setWidth("100%"); 
-	    /******************************************************************************/
- 
-	    /************** Add a selection model so we can select cells ******************/	    
-//	    final SingleSelectionModel<MemberDto> selectionModel = 
-//	    		new SingleSelectionModel<MemberDto>(KEY_PROVIDER);
-//	    this.setSelectionModel(selectionModel);
-//	    selectionModel.addSelectionChangeHandler(getSelectionChangeEvent(selectionModel));
-//	    
-//	    /* an another selection model to test */
-//	    final NoSelectionModel<MemberDto> selectionModel = new NoSelectionModel<MemberDto>();
-//	    selectionModel.addSelectionChangeHandler(getSelectionChangeEvent2((selectionModel)));
-//	    /* add selection model to dataGrid */
-//	    setSelectionModel(selectionModel); 
+	    
 	    /******************************************************************************/
 		
 		/****************** put datas on CellTable ************************************/	    
@@ -203,65 +190,6 @@ public class MembersCellTable extends CellTable<MemberLocalDto> {
 		return panel;
 	}
 	
-	/* helper method */	
-//	/* to provide a key for cell table select */
-//	private static final ProvidesKey<MemberDto> KEY_PROVIDER = new ProvidesKey<MemberDto>() {
-//	      @Override
-//	      public Object getKey(MemberDto item) {
-//	        return item == null ? null : item.getId();
-//	      }
-//	};
-//	private ActionCell<MemberDto> getDeleteAction(){
-//		return new ActionCell<MemberDto>(I18n.getI18nConstants().delete(), new ActionCell.Delegate<MemberDto>() {
-//			 @Override
-//			 public void execute(MemberDto member) {
-//				 DialogBoxConfirm<MemberDto> dialogBox = new DialogBoxConfirm<MemberDto>(member,
-//						 I18n.getI18nMessages().sure(),clickHandlerToTransmit());
-//				 dialogBox.center();
-//				 dialogBox.show();
-//			 }
-//		 });
-//
-//	}
-//	private ActionCell<MemberDto> getLookAction(){
-//		return new ActionCell<MemberDto>(I18n.getI18nConstants().look(), new ActionCell.Delegate<MemberDto>() {
-//			 @Override
-//			 public void execute(MemberDto member) {
-//				 Window.alert("You want to see: " + member.getName());
-//			 }
-//		 });
-//
-//	}
-//	private SelectionChangeEvent.Handler getSelectionChangeEvent(SingleSelectionModel<MemberDto> selectionModel){
-//		return	new SelectionChangeEvent.Handler() {
-//			        public void onSelectionChange(SelectionChangeEvent event) {
-//			       	 MemberDto selected = selectionModel.getSelectedObject();
-//			           if (selected != null) {
-//			              Window.alert("You selected: " + selected.getName());
-//			           }
-//			        }
-//			     };
-//	}
-//	private SelectionChangeEvent.Handler getSelectionChangeEvent2(NoSelectionModel<MemberDto> selectionModel){
-//		return	new SelectionChangeEvent.Handler() {
-//			        public void onSelectionChange(SelectionChangeEvent event) {
-//			       	 MemberDto selected = selectionModel.getLastSelectedObject();
-//			           if (selected != null) {
-//			              Window.alert("You selected: " + selected.getName());
-//			           }
-//			        }
-//			     };
-//	}
-//	private IActionToTransmit<MemberDto> clickHandlerToTransmit() {
-//		return new IActionToTransmit<MemberDto>() {
-//			@Override
-//			public void action(MemberDto member) {
-//				 dataProvider.getList().remove(member);
-//				 dataProvider.refresh();
-//				
-//			}
-//      };
-//	}	
 
 	/* getter */
 	public ListDataProvider<MemberLocalDto> getDataProvider() {

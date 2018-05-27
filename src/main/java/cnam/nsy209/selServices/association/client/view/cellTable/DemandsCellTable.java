@@ -121,28 +121,6 @@ public class DemandsCellTable extends CellTable<SupplyDemandLocalDto> {
 		return panel;
 	}
 
-//	private ActionCell<SupplyDemandDto> getDeleteAction(){
-//		return new ActionCell<SupplyDemandDto>(I18n.getI18nConstants().delete(), new ActionCell.Delegate<SupplyDemandDto>() {
-//			 @Override
-//			 public void execute(SupplyDemandDto supplyDemand) {
-//				 DialogBoxConfirm<SupplyDemandDto> dialogBox = new DialogBoxConfirm<SupplyDemandDto>(supplyDemand,
-//						 I18n.getI18nMessages().sure(),clickHandlerToTransmit());
-//				 dialogBox.center();
-//				 dialogBox.show();
-//			 }
-//		 });
-//
-//	}
-//	private IActionToTransmit<SupplyDemandDto> clickHandlerToTransmit() {
-//		return new IActionToTransmit<SupplyDemandDto>() {
-//			@Override
-//			public void action(SupplyDemandDto supplyDemand) {
-//				 dataProvider.getList().remove(supplyDemand);
-//				 dataProvider.refresh();
-//				
-//			}
-//      };
-//	}	
 
 	/* getter */
 	public ListDataProvider<SupplyDemandLocalDto> getDataProvider() {

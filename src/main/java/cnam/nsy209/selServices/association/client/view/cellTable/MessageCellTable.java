@@ -55,18 +55,7 @@ public class MessageCellTable extends CellTable<MessageLocalDto> {
 	    
 	    /* column width*/
 	    double columnWidth = width*0.1;
-	    
-//	    /* Date */
-//	    TextColumn<MessageLocalDto> dateColumn =
-//	        new TextColumn<MessageLocalDto>() {
-//	          @Override
-//	          public String getValue(MessageLocalDto object) {
-//	        	  DateTimeFormat dateFormat = DateTimeFormat.getFormat("dd-MM-yyyy");
-//	        	  return dateFormat.format(object.getDateLastUpdate());
-//	          }
-//	    };
-//	    addColumn(dateColumn, I18n.getI18nConstants().date());
-//	    setColumnWidth(dateColumn, columnWidth, Unit.PX);
+
 	    
 	    /* Title */
 	    TextColumn<MessageLocalDto> titleColumn =
@@ -133,30 +122,6 @@ public class MessageCellTable extends CellTable<MessageLocalDto> {
 		return panel;
 	}	
 	
-//	private ActionCell<MessageDto> getDeleteAction(){
-//		return new ActionCell<MessageDto>(I18n.getI18nConstants().delete(), new ActionCell.Delegate<MessageDto>() {
-//			 @Override
-//			 public void execute(MessageDto message) {
-//				 DialogBoxConfirm<MessageDto> dialogBox = new DialogBoxConfirm<MessageDto>(message,
-//						 I18n.getI18nMessages().sure(),clickHandlerToTransmit());
-//				 dialogBox.center();
-//				 dialogBox.show();
-//			 }
-//		 });
-//
-//	}
-//	private IActionToTransmit<MessageDto> clickHandlerToTransmit() {
-//		return new IActionToTransmit<MessageDto>() {
-//			@Override
-//			public void action(MessageDto message) {
-//				 dataProvider.getList().remove(message);
-//				 dataProvider.refresh();
-//				
-//			}
-//      };
-//	}		
-
-	/* getter */
 	public ListDataProvider<MessageLocalDto> getDataProvider() {
 		return dataProvider;
 	}

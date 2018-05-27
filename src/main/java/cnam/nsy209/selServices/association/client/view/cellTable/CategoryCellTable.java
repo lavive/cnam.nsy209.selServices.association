@@ -113,29 +113,7 @@ public class CategoryCellTable extends CellTable<CategoryLocalDto> {
 	public VerticalPanel getPanel() {
 		return panel;
 	}
-	
-//	private ActionCell<CategoryDto> getDeleteAction(){
-//		return new ActionCell<CategoryDto>(I18n.getI18nConstants().delete(), new ActionCell.Delegate<CategoryDto>() {
-//			 @Override
-//			 public void execute(CategoryDto category) {
-//				 DialogBoxConfirm<CategoryDto> dialogBox = new DialogBoxConfirm<CategoryDto>(category,
-//						 I18n.getI18nMessages().sure(),clickHandlerToTransmit());
-//				 dialogBox.center();
-//				 dialogBox.show();
-//			 }
-//		 });
-//
-//	}
-//	private IActionToTransmit<CategoryDto> clickHandlerToTransmit() {
-//		return new IActionToTransmit<CategoryDto>() {
-//			@Override
-//			public void action(CategoryDto category) {
-//				 dataProvider.getList().remove(category);
-//				 dataProvider.refresh();
-//				
-//			}
-//      };
-//	}	
+
 
 	/* getter */
 	public ListDataProvider<CategoryLocalDto> getDataProvider() {
