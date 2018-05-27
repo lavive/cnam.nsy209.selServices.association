@@ -7,7 +7,13 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 import cnam.nsy209.selServices.association.shared.exception.AuthenticationException;
 import cnam.nsy209.selServices.association.shared.localDto.MemberLocalDto;
-
+/** 
+ * 
+ * Interface which calls Authentication service
+ * 
+ * @author lavive
+ *
+ */
 @RemoteServiceRelativePath("AuthenticationService")
 public interface AuthenticationService extends RemoteService {
 	public List<MemberLocalDto> checkIds(String login,String password, int numberToDisplay) throws AuthenticationException;

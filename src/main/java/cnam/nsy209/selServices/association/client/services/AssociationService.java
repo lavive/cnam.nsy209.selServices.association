@@ -6,6 +6,14 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 import cnam.nsy209.selServices.association.shared.exception.AssociationException;
 import cnam.nsy209.selServices.association.shared.localDto.AssociationLocalDto;
 
+
+/** 
+ * 
+ * Interface which calls Association service
+ * 
+ * @author lavive
+ *
+ */
 @RemoteServiceRelativePath("AssociationService")
 public interface AssociationService extends RemoteService {
 	public AssociationLocalDto getAssociation();

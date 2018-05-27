@@ -10,13 +10,18 @@ import cnam.nsy209.selServices.association.shared.exception.DoNotExistException;
 import cnam.nsy209.selServices.association.shared.exception.EmptyException;
 import cnam.nsy209.selServices.association.shared.exception.EmptyMemberListException;
 import cnam.nsy209.selServices.association.shared.localDto.MemberLocalDto;
-
+/** 
+ * 
+ * Interface which calls Member service
+ * 
+ * @author lavive
+ *
+ */
 @RemoteServiceRelativePath("MembersService")
 public interface MembersService extends RemoteService {
 	public List<MemberLocalDto> getMembers();
 	public List<MemberLocalDto> getLastMembers(int numberToDisplay);
 	public List<MemberLocalDto> getMembers(MemberLocalDto member) throws EmptyMemberListException;
-	//public List<MemberDto> delete(MemberDto member,List<MemberDto> members) throws DoNotExistException;
 	public List<MemberLocalDto> delete(MemberLocalDto member) throws DoNotExistException;
 	public List<MemberLocalDto> delete(MemberLocalDto member, MemberLocalDto attributes) throws DoNotExistException;
 	public List<MemberLocalDto> deleteLastMember(MemberLocalDto member,int numberToDisplay) throws DoNotExistException;

@@ -7,7 +7,13 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 import cnam.nsy209.selServices.association.shared.exception.DoNotExistException;
 import cnam.nsy209.selServices.association.shared.localDto.SupplyDemandLocalDto;
-
+/** 
+ * 
+ * Interface which calls SupplyDemand service
+ * 
+ * @author lavive
+ *
+ */
 @RemoteServiceRelativePath("SuppliesDemandsService")
 public interface SuppliesDemandsService extends RemoteService {
 	public List<SupplyDemandLocalDto> getSuppliesDemands(String type);

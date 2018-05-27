@@ -7,7 +7,13 @@ import cnam.nsy209.selServices.association.shared.exception.TransactionNotWellFo
 import cnam.nsy209.selServices.association.shared.localDto.MemberLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.TransactionLocalDto;
 import cnam.nsy209.selServices.association.shared.localDto.WealthSheetLocalDto;
-
+/** 
+ * 
+ * Interface which calls Transaction service
+ * 
+ * @author lavive
+ *
+ */
 @RemoteServiceRelativePath("TransactionsService")
 public interface TransactionsService extends RemoteService {
 	public WealthSheetLocalDto getTransactions(MemberLocalDto member);

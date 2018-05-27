@@ -9,7 +9,13 @@ import cnam.nsy209.selServices.association.shared.exception.AlReadyExistExceptio
 import cnam.nsy209.selServices.association.shared.exception.DoNotExistException;
 import cnam.nsy209.selServices.association.shared.exception.EmptyException;
 import cnam.nsy209.selServices.association.shared.localDto.CategoryLocalDto;
-
+/** 
+ * 
+ * Interface which calls Category service
+ * 
+ * @author lavive
+ *
+ */
 @RemoteServiceRelativePath("CategoriesService")
 public interface CategoriesService extends RemoteService {
 	public List<CategoryLocalDto> add(CategoryLocalDto category) throws AlReadyExistException,EmptyException;
