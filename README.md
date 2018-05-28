@@ -14,7 +14,11 @@ CNAM NSY209 project 2018 - frontend side for SEL Services
     * follow instructions
 * Clone this project
 ### Process
-* import this project in Eclipse
+* Clone this project in zip file and extract
+* 'new maven project' in Eclipse
+* skip archetype selection
+* groupId: ***cnam.nsy209***, artifactId: ***selServices.server*** and finish
+* copy extracted project files in Eclipse project
 * Go to 'RetrofitBuilder' file in package *cnam.nsy209.selServices.association.server.webService*
 * Change **BASE_URL** into machine address where **cnam.nsy209.selServices.restServie** will be installed 
 * Go to 'run Configurations' -> right click on 'Maven Build' -> 'new'
